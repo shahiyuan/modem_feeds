@@ -295,7 +295,7 @@ scan_usb_slot_interfaces()
             ;;
             qmi_wwan*|\
             cdc_mbim|\
-            cdc_ncm|\
+            *cdc_ncm|\
             cdc_ether|\
             rndis_host)
                 net_path="$slot_path/$interface/net"
@@ -347,10 +347,18 @@ match_config()
 
     [[ "$name" = *"T99W373"* ]] && name="t99w373"
 
+    [[ "$name" = *"dp25-42843-47"* ]] && name="t99w640"
+
     [[ "$name" = *"SIM8380G"* ]] && name="SIM8380G-M2"
 
     #rg200u-cn
     [[ "$name" = *"rg200u-cn"* ]] && name="rg200u-cn"
+    
+    #nu313-m2
+    [[ "$name" = *"nu313-m2"* ]] && name="srm821"
+
+    #nari-m601
+    [[ "$name" = *"m601"* ]] && name="n510m"
 
     modem_config=$(echo $modem_support | jq '.modem_support."'$slot_type'"."'$name'"')
     [ "$modem_config" == "null"  ] && return
