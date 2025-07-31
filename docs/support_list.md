@@ -9,6 +9,7 @@ mh5000-31 | hisilicon |✔ usb(ecm) | ✘
 Model | Platform | USB  | PCIe 
 --- | --- | --- | ---
 em05 | lte |✔ usb(qmi,ecm,mbim,rndis) | ✘
+em05-cn | lte |✔ usb(qmi,ecm,mbim,rndis) | ✘
 ep06 | lte |✔ usb(qmi,ecm,mbim,rndis) | ✘
 em12 | lte |✔ usb(qmi,ecm,mbim,rndis) | ✘
 em120k | lte12 |✔ usb(qmi,ecm,mbim,rndis) | ✘
@@ -35,6 +36,7 @@ rg501q-eu | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gob
 rg520n-eu | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 mh8001-eu | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 rg520f-eb | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
+rg520f-jo | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 rg530f-na | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 ec20f | lte |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 ec25 | lte |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
@@ -68,6 +70,11 @@ srm821 | unisoc |✔ usb(ecm,rndis,ncm) | ✘
 Model | Platform | USB  | PCIe 
 --- | --- | --- | ---
 em9190 | qualcomm |✔ usb(mbim,rmnet) | ✔ pcie(mbim,rmnet)
+
+# telit
+Model | Platform | USB  | PCIe 
+--- | --- | --- | ---
+fn990a40 | qualcomm |✔ usb(mbim,rndis,qmi,ecm) | ✔ pcie(mbim,qmi)
 
 # simcom
 Model | Platform | USB  | PCIe 

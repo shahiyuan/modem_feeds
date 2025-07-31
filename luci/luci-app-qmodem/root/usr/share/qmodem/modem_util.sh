@@ -3,22 +3,29 @@
 
 at()
 {
-    local at_port=$1
-    local new_str="${2/[$]/$}"
-	local atcmd="${new_str/\"/\"}"
-	#过滤空行
-    #sms_tool_q -d $at_port at "$atcmd"
-	tom_modem -d $at_port -o a -c "$atcmd"
+  local at_port=$1
+  local new_str="${2/[$]/$}"
+  local atcmd="${new_str/\"/\"}"
+  [ "$clear_buffer" == "1" ] && options="$options -M"
+  #过滤空行
+  if [ "$(uci get qmodem.main.at_tool 2>/dev/null)" == "1" ]; then
+   sms_tool_q -d $at_port at "$atcmd"
+  else
+   tom_modem -d $at_port -o a -c "$atcmd" $options
+  fi
 }
 
 fastat()
 {
-    local at_port=$1
-    local new_str="${2/[$]/$}"
-	local atcmd="${new_str/\"/\"}"
-	#过滤空行
-    # sms_tool_q -t 1 -d $at_port at "$atcmd"
-	tom_modem -d $at_port -o a -c "$atcmd" -t 1
+  local at_port=$1
+  local new_str="${2/[$]/$}"
+  local atcmd="${new_str/\"/\"}"
+  #过滤空行
+  if [ "$(uci get qmodem.main.at_tool 2>/dev/null)" == "1" ]; then
+   sms_tool_q -t 1 -d $at_port at "$atcmd"
+  else
+   tom_modem -d $at_port -o a -c "$atcmd" -t 1
+  fi
 }
 
 log2file()
@@ -152,6 +159,23 @@ at_get_slot()
 					sim_slot="1"
 					;;
 				"2")
+					sim_slot="2"
+					;;
+				*)
+					sim_slot="1"
+					;;
+			*)
+				sim_slot="1"
+				;;
+			esac
+			;;
+		"telit")
+			at_res=$(at $at_port AT#QSS? | grep "#QSS:" | awk -F',' '{print $3}' | sed 's/\r//g')
+			case $at_res in
+				"0")
+					sim_slot="1"
+					;;
+				"1")
 					sim_slot="2"
 					;;
 				*)
