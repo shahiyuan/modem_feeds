@@ -14,22 +14,49 @@ if [ -z "$API_CONFIG" ]; then
     exit 1
 fi
 
-# Extract configuration
-WEBHOOK_URL=$(echo "$API_CONFIG" | grep -o '"webhook_url":"[^"]*"' | cut -d'"' -f4)
-HEADERS=$(echo "$API_CONFIG" | grep -o '"headers":"[^"]*"' | cut -d'"' -f4)
+# Extract configuration using jq or manual parsing
+WEBHOOK_URL=$(echo "$API_CONFIG" | jq -r '.webhook_url' 2>/dev/null)
+HEADERS=$(echo "$API_CONFIG" | jq -r '.headers' 2>/dev/null)
+
+# Fallback to manual parsing if jq fails
+if [ -z "$WEBHOOK_URL" ] || [ "$WEBHOOK_URL" = "null" ]; then
+    WEBHOOK_URL=$(echo "$API_CONFIG" | grep -o '"webhook_url":"[^"]*"' | cut -d'"' -f4)
+fi
+
+if [ -z "$HEADERS" ] || [ "$HEADERS" = "null" ]; then
+    HEADERS=$(echo "$API_CONFIG" | grep -o '"headers":"[^"]*"' | cut -d'"' -f4)
+fi
 
 if [ -z "$WEBHOOK_URL" ]; then
     echo "Error: Missing required webhook URL"
     exit 1
 fi
 
-# Prepare JSON payload
-JSON_PAYLOAD="{
+# Prepare JSON payload using jq if available
+if command -v jq >/dev/null 2>&1; then
+    JSON_PAYLOAD=$(jq -n \
+        --arg type "sms" \
+        --arg title "QModem SMS: ($SMS_SENDER)" \
+        --arg timestamp "$SMS_TIME" \
+        --arg sender "$SMS_SENDER" \
+        --arg content "$SMS_CONTENT" \
+        '{
+            type: $type,
+            title: $title,
+            timestamp: $timestamp,
+            sender: $sender,
+            content: $content
+        }')
+else
+    # Fallback JSON generation
+    JSON_PAYLOAD="{
     \"type\": \"sms\",
+    \"title\": \"QModem SMS: ($SMS_SENDER)\",
     \"timestamp\": \"$SMS_TIME\",
     \"sender\": \"$SMS_SENDER\",
     \"content\": \"$SMS_CONTENT\"
 }"
+fi
 
 # Try curl first, then wget
 if command -v curl >/dev/null 2>&1; then
