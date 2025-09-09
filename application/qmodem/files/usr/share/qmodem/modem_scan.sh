@@ -109,6 +109,8 @@ scan_pcie()
 {
     #beta
     m_debug "scan_pcie"
+    echo 1 > /sys/bus/pci/rescan
+    sleep 1
     pcie_net_device_prefixs="rmnet wwan"
     pcie_slots=""
     for pcie_net_device_prefix in $pcie_net_device_prefixs; do
