@@ -86,6 +86,7 @@ Model | Platform | USB  | PCIe
 --- | --- | --- | ---
 simcom_d8200g | qualcomm |✔ usb(qmi,rndis) | ✘
 simcom_sim8200ea-m2 | qualcomm |✔ usb(qmi,rndis) | ✘
+simcom_sim8202g-m2 | qualcomm |✔ usb(qmi,rndis,mbim) | ✘
 simcom_sim8380g-m2 | qualcomm |✔ usb(qmi,rndis) | ✔ pcie(qmi)
 
 # foxconn
