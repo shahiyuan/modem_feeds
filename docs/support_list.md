@@ -31,9 +31,9 @@ rm505q-ae | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 rm520n-cn | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 rm520n-eu | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 rm520n-gl | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
-rm523n-gl | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 rm520f-gl | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 rm521f-gl | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
+rm530n-gl | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 rm551e-gl | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 rg501q-eu | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
 rg520n-eu | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,gobinet,mbim)
@@ -46,7 +46,6 @@ ec20f | lte |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 ec25 | lte |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 ec21 | lte |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 ec200a | lte |✔ usb(ecm,mbim,rndis,ncm) | ✘
-rm530n-gl | qualcomm |✘ | ✔ pcie(qmi,gobinet,mbim)
 
 # fibocom
 Model | Platform | USB  | PCIe 
