@@ -723,10 +723,11 @@ qmi_dial()
         [ -n "$metric" ] && cmd_line="$cmd_line"
     fi
     cmd_line="$cmd_line -f $log_file"
-    m_debug "dialing $cmd_line"
-    exec $cmd_line
-    
-    
+    while true; do
+        m_debug "dialing: $cmd_line"
+        $cmd_line
+        m_debug "quectel-CM exited, retrying dial"
+    done
 }
 
 at_dial()
