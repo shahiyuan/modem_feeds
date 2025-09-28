@@ -969,45 +969,29 @@ get_neighborcell()
             continue
         fi
         case $line in
-            *"NR neighbor cell"*)
-                cell_type="NR"
-                continue
-                ;;
-            *"LTE neighbor cell"*)
-                cell_type="LTE"
-                continue
-                ;;
-            *"service cell"*|*"GTCELLINFO"*|*"OK"*)
-                cell_type="undefined"
-                continue
-                ;;
-        esac
-        case $cell_type in
-            "NR")
+            "2,9"*)
+                m_debug "NR line:$line"
                 tac=$(echo "$line" | awk -F',' '{print $5}')
                 cellid=$(echo "$line" | awk -F',' '{print $6}')
                 arfcn=$(echo "$line" | awk -F',' '{print $7}')
                 pci=$(echo "$line" | awk -F',' '{print $8}')
-                ss_sinr=$(echo "$line" | awk -F',' '{print $9}')
-                rxlev=$(echo "$line" | awk -F',' '{print $10}')
-                ss_rsrp=$(echo "$line" | awk -F',' '{print $11}')
-                ss_rsrq=$(echo "$line" | awk -F',' '{print $12}')
-                arfcn=$(echo 'ibase=16;' "$arfcn"  | bc)
-                pci=$(echo 'ibase=16;' "$pci"  | bc)
+                ss_sinr=$(echo "$line" | awk -F',' '{print $10}')
+                rxlev=$(echo "$line" | awk -F',' '{print $11}')
+                ss_rsrp=$(echo "$line" | awk -F',' '{print $12}')
                 json_select "NR"
                 json_add_object ""
                 json_add_string "tac" "$tac"
                 json_add_string "cellid" "$cellid"
                 json_add_string "arfcn" "$arfcn"
                 json_add_string "pci" "$pci"
+                json_add_string "bandwidth" "$bandwidth"
                 json_add_string "ss_sinr" "$ss_sinr"
                 json_add_string "rxlev" "$rxlev"
                 json_add_string "ss_rsrp" "$ss_rsrp"
-                json_add_string "ss_rsrq" "$ss_rsrq"
                 json_close_object
                 json_select ".."
                 ;;
-            "LTE")
+            "2,4"*)
                 tac=$(echo "$line" | awk -F',' '{print $5}')
                 cellid=$(echo "$line" | awk -F',' '{print $6}')
                 arfcn=$(echo "$line" | awk -F',' '{print $7}')
@@ -1071,7 +1055,6 @@ get_neighborcell()
     json_close_object
     json_close_object
 }
-
 
 set_neighborcell(){
     json_param=$1
