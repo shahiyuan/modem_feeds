@@ -109,8 +109,7 @@ opkg install luci-app-qmodem.ipk --force-depends
 | **接口类型** (`data_interface`)             | `List`    | 连接接口类型 (USB 或 PCIe)。                                |
 | **别名** (`alias`)                          | `Text`    | 模组的自定义、用户友好名称。                                |
 | **软重启** (`soft_reboot`)                  | `Flag`    | 启用模组的软重启，而不是完全断电重启。                      |
-| **V4/V6 连接检查** (`connect_check`)        | `Flag`    | 对于 AT 拨号模组，执行检查以确保已建立 IPv4/IPv6 连接。     |
-| **PDP 上下文索引** (`define_connect`)       | `Integer` | 用于连接的 PDP 上下文索引 (默认为 1)。                      |
+| **PDP 上下文索引** (`pdp_index`)       | `Integer` | 用于连接的 PDP 上下文索引 (默认为 1)。                      |
 | **制造商** (`manufacturer`)                 | `List`    | 模组的制造商 (例如，Quectel, Fibocom)。                     |
 | **平台** (`platform`)                       | `List`    | 模组的芯片组平台 (例如，SDX55, SDX62)。                     |
 | **AT 端口** (`at_port`)                     | `Text`    | AT 命令端口的设备路径 (例如，`/dev/ttyUSB2`)。              |
@@ -138,7 +137,7 @@ opkg install luci-app-qmodem.ipk --force-depends
 | **扩展前缀** (`extend_prefix`)            | 高级   | `Flag`    | 如果启用，委派的 IPv6 前缀将应用于 LAN 区域。                            |
 | **PDP 类型** (`pdp_type`)                 | 高级   | `List`    | 连接的 IP 协议 (`IPv4`, `IPv6`, 或 `IPv4/IPv6`)。                        |
 | **APN / APN 2** (`apn`, `apn2`)           | 高级   | `Text`    | SIM 卡槽 1 和 2 的接入点名称。可以留空以进行自动检测。                   |
-| **认证类型** (`auth`)                     | 高级   | `List`    | 认证协议 (`NONE`, `PAP`, `CHAP`, 或 `PAP/CHAP`)。                        |
+| **认证类型** (`auth`)                     | 高级   | `List`    | 认证协议 (`NONE`, `PAP`, `CHAP`, 或 `MsChapV2`)。                        |
 | **PAP/CHAP 用户名/密码**                  | 高级   | `Text`    | 如果需要，用于认证的凭据。                                               |
 | **PIN 码** (`pincode`)                    | 高级   | `Text`    | SIM 卡的 PIN 码，如果已锁定。                                            |
 | **跃点数** (`metric`)                     | 高级   | `Integer` | 此接口的路由跃点数。值越小，优先级越高。                                 |
