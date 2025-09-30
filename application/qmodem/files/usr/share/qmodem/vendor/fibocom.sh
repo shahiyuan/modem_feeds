@@ -1401,7 +1401,7 @@ cell_info()
             esac
 
             #联发科平台特殊处理（FM350-GL）
-            [[ "$name" = "FM350-GL" ]] && {
+            [[ "$platform" = "mediatek" ]] && {
                 nr_sinr="${nr_sinr_num}"
                 endc_nr_sinr="${endc_nr_sinr_num}"
             }
