@@ -389,7 +389,7 @@ sim_info()
     fi
 
     #ISP（互联网服务提供商）
-    at $at_port "AT+COPS=3,2"
+    at $at_port "AT+COPS=3,2" > /dev/null 2>&1
     at_command="AT+COPS?"
     isp=$(at $at_port $at_command | sed -n '2p' | awk -F'"' '{print $2}')
     # if [ "$isp" = "CHN-CMCC" ] || [ "$isp" = "CMCC" ]|| [ "$isp" = "46000" ]; then
