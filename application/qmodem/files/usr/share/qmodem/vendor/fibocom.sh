@@ -1282,11 +1282,13 @@ cell_info()
                             fi
                             if [ "$scc_ul_ca" = "1" ]; then
                                 scc_ul_bandwidth_new=$scc_dl_bandwidth_new
-                                if [ -z "$scc_ul_bandwidth" ]; then
-                                    scc_ul_bandwidth="$scc_ul_bandwidth_new"
-                                else
-                                    scc_ul_bandwidth="$scc_ul_bandwidth / $scc_ul_bandwidth_new"
-                                fi
+                            else
+                                scc_ul_bandwidth_num="-"
+                            fi
+                            if [ -z "$scc_ul_bandwidth" ]; then
+                                scc_ul_bandwidth="$scc_ul_bandwidth_new"
+                            else
+                                scc_ul_bandwidth="$scc_ul_bandwidth / $scc_ul_bandwidth_new"
                             fi
                         fi
                     done
@@ -1401,7 +1403,7 @@ cell_info()
             esac
 
             #联发科平台特殊处理（FM350-GL）
-            [[ "$name" = "FM350-GL" ]] && {
+            [[ "$platform" = "mediatek" ]] && {
                 nr_sinr="${nr_sinr_num}"
                 endc_nr_sinr="${endc_nr_sinr_num}"
             }
