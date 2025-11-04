@@ -2314,6 +2314,54 @@ exit:
 }
 
 #include <json-c/json.h>
+static int mbim_get_imsi(char *imsi_buf, size_t buf_len) {
+    MBIM_MESSAGE_HEADER *pRequest = NULL;
+    MBIM_COMMAND_DONE_T *pCmdDone = NULL;
+    int err;
+
+    // Clear the output buffer first
+    if (buf_len > 0) {
+        imsi_buf[0] = '\0';
+    }
+
+    mbim_debug("%s()", __func__);
+
+    pRequest = compose_basic_connect_command(MBIM_CID_SUBSCRIBER_READY_STATUS, MBIM_CID_CMD_TYPE_QUERY, NULL, 0);
+    if (!pRequest) {
+        return -ENOMEM;
+    }
+
+    err = mbim_send_command(pRequest, &pCmdDone, mbim_default_timeout);
+
+    if (err || !pCmdDone || le32toh(pCmdDone->Status) != MBIM_STATUS_SUCCESS) {
+        mbim_debug("%s failed: send_command err=%d, response status=%d\n", __func__, err, 
+                   pCmdDone ? le32toh(pCmdDone->Status) : -1);
+        mbim_free(pRequest);
+        mbim_free(pCmdDone);
+        return (err != 0) ? err : -1;
+    }
+
+    if (le32toh(pCmdDone->InformationBufferLength)) {
+         MBIM_SUBSCRIBER_READY_STATUS_T *pInfo = (MBIM_SUBSCRIBER_READY_STATUS_T *)pCmdDone->InformationBuffer;
+
+         if (le32toh(pInfo->SubscriberIdSize) > 0) {
+            wchar2char((const char *)pInfo + le32toh(pInfo->SubscriberIdOffset),
+                       le32toh(pInfo->SubscriberIdSize),
+                       imsi_buf,
+                       buf_len);
+            mbim_debug("IMSI successfully retrieved: %s", imsi_buf);
+         }
+    }
+
+    mbim_free(pRequest);
+    mbim_free(pCmdDone);
+    if (imsi_buf[0] == '\0') {
+        return -1;
+    }
+
+    return 0;
+}
+
 static int GetAPNConfig(PROFILE_T *profile, const char *json_path)
 {
     mbim_debug("GetAPNConfig");    
