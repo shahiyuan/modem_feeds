@@ -22,7 +22,7 @@ QL_CM_DHCP+=${LIBMNL}
 endif
 
 CFLAGS += -Wall -Wextra -Werror -O1 #-s
-LDFLAGS += -lpthread -ldl -lrt
+LDFLAGS += -lpthread -ldl -lrt -ljson-c
 
 release: clean qmi-proxy mbim-proxy atc-proxy #qrtr-proxy
 	$(CC) ${CFLAGS} ${QL_CM_SRC} ${QL_CM_DHCP} -o quectel-CM ${LDFLAGS}
