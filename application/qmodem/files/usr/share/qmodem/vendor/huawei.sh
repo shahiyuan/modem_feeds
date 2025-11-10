@@ -27,9 +27,10 @@ function set_imei(){
 
 function get_mode(){
     cfg=$(at $at_port "AT^SETMODE?")
-    local mode_num=`echo -e "$cfg" | sed -n '2p' | sed 's/\r//g'`
+    
     case $platform in
         "unisoc")
+            local mode_num=$(echo -e "$cfg" | grep "^SETMODE"|grep -o '\d')
             case $mode_num in
                 "0") mode="rndis" ;;
                 "1") mode="ecm" ;;
@@ -38,7 +39,8 @@ function get_mode(){
             esac
             ;;
         *)
-        case "$mode_num" in
+            local mode_num=$(echo -e "$cfg" | sed -n '2p' | sed 's/\r//g')
+            case "$mode_num" in
             "0"|"2") mode="ecm" ;;
             "1"|"3"|"4"|"5") mode="ncm" ;;
             "6") mode="rndis" ;;
