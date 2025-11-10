@@ -72,6 +72,14 @@
                 "include": [
                     "1.1"
                 ]
+            },
+            "1782:4058": {
+                "name": "TDTECH MH5000-82M",
+                "mode": "ecm",
+                "option_driver": 1,
+                "include": [
+                    "1.2"
+                ]
             }
         }
     }
