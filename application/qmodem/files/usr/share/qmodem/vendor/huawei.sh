@@ -276,9 +276,17 @@ cell_info()
 {
     at_command="AT^MONSC"
     response=$(at $at_port $at_command | grep "\^MONSC:" | sed 's/\^MONSC: //')
-    
-    local rat=$(echo "$response" | awk -F',' '{print $1}')
-    case $rat in
+        
+    cell_rat=$(echo "$response" | awk -F',' '{print $1}')
+    case "$platform" in
+        "unisoc")
+            cops=$(at $at_port "AT+COPS?" | grep "+COPS:" | awk -F',' '{print $4}' | xargs)
+            if [ "$cops" = "13" ]; then
+                cell_rat="LTE-NR"
+            fi
+            ;;
+    esac
+    case $cell_rat in
         "NR"|"NR-5GC")
             network_mode="NR5G-SA Mode"
             nr_mcc=$(echo "$response" | awk -F',' '{print $2}')
@@ -296,6 +304,7 @@ cell_info()
             nr_sinr=$(echo "$response" | awk -F',' '{print $11}' | sed 's/\r//g')
         ;;
         "LTE-NR")
+            nr_response=$(at $at_port "AT^CSERSSI?")
             network_mode="EN-DC Mode"
             #LTE
             endc_lte_mcc=$(echo "$response" | awk -F',' '{print $2}')
@@ -310,19 +319,9 @@ cell_info()
             endc_lte_rsrq=$(echo "$response" | awk -F',' '{print $9}')
             endc_lte_rxlev=$(echo "$response" | awk -F',' '{print $10}' | sed 's/\r//g')
             #NR5G-NSA
-            endc_nr_mcc=$(echo "$response" | awk -F',' '{print $2}')
-            endc_nr_mnc=$(echo "$response" | awk -F',' '{print $3}')
-            endc_nr_arfcn=$(echo "$response" | awk -F',' '{print $4}')
-            endc_nr_scs_num=$(echo "$response" | awk -F',' '{print $5}')
-            nr_scs=$(get_scs ${nr_scs_num})
-            endc_nr_cell_id_hex=$(echo "$response" | awk -F',' '{print $6}')
-            endc_nr_cell_id=$(echo "ibase=16; $endc_nr_cell_id_hex" | bc)
-            endc_nr_physical_cell_id_hex=$(echo "$response" | awk -F',' '{print $7}')
-            endc_nr_physical_cell_id=$(echo "ibase=16; $endc_nr_physical_cell_id_hex" | bc)
-            endc_nr_tac=$(echo "$response" | awk -F',' '{print $8}')
-            endc_nr_rsrp=$(echo "$response" | awk -F',' '{print $9}')
-            endc_nr_rsrq=$(echo "$response" | awk -F',' '{print $10}')
-            endc_nr_sinr=$(echo "$response" | awk -F',' '{print $11}' | sed 's/\r//g')
+            endc_nr_rsrp=$(echo "$nr_response" | awk -F',' '{print $6}')
+            endc_nr_rsrq=$(echo "$nr_response" | awk -F',' '{print $7}')
+            endc_nr_sinr=$(echo "$nr_response" | awk -F',' '{print $8}' | sed 's/\r//g')
         ;;
         "LTE"|"eMTC"|"NB-IoT")
             network_mode="LTE Mode"
