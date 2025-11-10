@@ -101,7 +101,7 @@ int sms_read(PROFILE_T *profile, void *transport_ptr)
         char *line = strtok(response_text, "\n");
         int sms_count = 0;
 
-        while (line != NULL)
+        while (line != NULL ||  line == "\n")
         {
             if (strncmp(line, "+CMGL:", 6) == 0)
             {
@@ -216,7 +216,7 @@ int sms_read_unread(PROFILE_T *profile, void *transport_ptr)
         char *line = strtok(response_text, "\n");
         int sms_count = 0;
 
-        while (line != NULL)
+        while (line != NULL || line == "\n")
         {
             if (strncmp(line, "+CMGL:", 6) == 0)
             {
