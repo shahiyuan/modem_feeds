@@ -7,7 +7,12 @@ source /usr/share/qmodem/generic.sh
 debug_subject="quectel_ctrl"
 
 vendor_get_disabled_features(){
-    json_add_string "" "LockBand"
+    case "$platform" in
+        *)
+            json_add_string "" "LockBand"
+            json_add_string "" "NeighborCell"
+            ;;
+    esac
 }
 
 function get_imei(){
@@ -23,15 +28,27 @@ function set_imei(){
 function get_mode(){
     cfg=$(at $at_port "AT^SETMODE?")
     local mode_num=`echo -e "$cfg" | sed -n '2p' | sed 's/\r//g'`
-
-    case "$mode_num" in
-        "0"|"2") mode="ecm" ;;
-        "1"|"3"|"4"|"5") mode="ncm" ;;
-        "6") mode="rndis" ;;
-        "7") mode="mbim" ;;
-        "8") mode="ppp" ;;
-        *) mode="rndis" ;;
+    case $platform in
+        "unisoc")
+            case $mode_num in
+                "0") mode="rndis" ;;
+                "1") mode="ecm" ;;
+                "2") mode="ncm" ;;
+                *) mode="rndis" ;;
+            esac
+            ;;
+        *)
+        case "$mode_num" in
+            "0"|"2") mode="ecm" ;;
+            "1"|"3"|"4"|"5") mode="ncm" ;;
+            "6") mode="rndis" ;;
+            "7") mode="mbim" ;;
+            "8") mode="ppp" ;;
+            *) mode="rndis" ;;
     esac
+            ;;
+    esac
+
     
     available_modes=$(uci -q get qmodem.$config_section.modes)
     json_add_object "mode"
@@ -48,17 +65,35 @@ function get_mode(){
 function set_mode(){
     local mode=$1
     local mode_num
-    case $mode in
-        "ecm")
-            mode_num="0"
-            ;;
-        "ncm")
-            mode_num="4"
+    case "$platform" in
+        "unisoc")
+            case $mode in
+                "rndis")
+                    mode_num="0"
+                    ;;
+                "ecm")
+                    mode_num="1"
+                    ;;
+                "ncm")
+                    mode_num="0"
+                    ;;
+            esac
             ;;
         *)
-            mode_num="0"
-            ;;
+            case $mode in
+                "ecm")
+                    mode_num="0"
+                    ;;
+                "ncm")
+                    mode_num="4"
+                    ;;
+                *)
+                    mode_num="0"
+                    ;;
+            esac
+        ;;
     esac
+
     at $at_port "AT^SETMODE=${mode_num}"
 }
 
@@ -542,10 +577,21 @@ function _get_temperature(){
     response=$(at $at_port "AT^CHIPTEMP?" | grep "\^CHIPTEMP" | awk -F',' '{print $6}' | sed 's/\r//g' )
     
     local temperature
-    [ -n "$response" ] && {
-        response=$(awk "BEGIN{ printf \"%.2f\", $response / 10 }" | sed 's/\.*0*$//')
-        add_plain_info_entry "temperature" "$response $(printf "\xc2\xb0")C" "Temperature" 
-    }
+    case $platform in
+        "unisoc")
+            [ -n "$response" ] && {
+                response=$(awk "BEGIN{ printf \"%.2f\", $response }" | sed 's/\.*0*$//')
+                add_plain_info_entry "temperature" "$response $(printf "\xc2\xb0")C" "Temperature" 
+            }
+            ;;
+        *)
+            [ -n "$response" ] && {
+                response=$(awk "BEGIN{ printf \"%.2f\", $response / 10 }" | sed 's/\.*0*$//')
+                add_plain_info_entry "temperature" "$response $(printf "\xc2\xb0")C" "Temperature" 
+            }
+            ;;
+    esac
+
 }
 
 function _add_avalible_band(){
@@ -645,4 +691,3 @@ for line in $data;do
 done
 unset IFS
 }
-
