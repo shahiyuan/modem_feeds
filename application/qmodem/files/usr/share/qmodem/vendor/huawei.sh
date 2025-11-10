@@ -319,9 +319,9 @@ cell_info()
             endc_lte_rsrq=$(echo "$response" | awk -F',' '{print $9}')
             endc_lte_rxlev=$(echo "$response" | awk -F',' '{print $10}' | sed 's/\r//g')
             #NR5G-NSA
-            endc_nr_rsrp=$(echo "$nr_response" | awk -F',' '{print $6}')
-            endc_nr_rsrq=$(echo "$nr_response" | awk -F',' '{print $7}')
-            endc_nr_sinr=$(echo "$nr_response" | awk -F',' '{print $8}' | sed 's/\r//g')
+            endc_nr_rsrp=$(echo "$nr_response" | awk -F',' '{print $12}')
+            endc_nr_rsrq=$(echo "$nr_response" | awk -F',' '{print $13}')
+            endc_nr_sinr=$(echo "$nr_response" | awk -F',' '{print $14}' | sed 's/\r//g')
         ;;
         "LTE"|"eMTC"|"NB-IoT")
             network_mode="LTE Mode"
@@ -401,27 +401,19 @@ cell_info()
         add_plain_info_entry "Band" "$endc_lte_band" "Band"
         add_plain_info_entry "UL Bandwidth" "$endc_lte_ul_bandwidth" "UL Bandwidth"
         add_plain_info_entry "DL Bandwidth" "$endc_lte_dl_bandwidth" "DL Bandwidth"
-        add_plain_info_entry "TAC" "$endc_lte_tac" "Tracking area code of cell served by neighbor Enb"
-        add_bar_info_entry "RSRP" "$endc_lte_rsrp" "Reference Signal Received Power" -140 -44 dBm
-        add_bar_info_entry "RSRQ" "$endc_lte_rsrq" "Reference Signal Received Quality" -20 20 dBm
-        add_bar_info_entry "RSSI" "$endc_lte_rssi" "Received Signal Strength Indicator" -140 -44 dBm
-        add_bar_info_entry "SINR" "$endc_lte_sinr" "Signal to Interference plus Noise Ratio Bandwidth" -23 40 dB
-        add_plain_info_entry "RxLev" "$endc_lte_rxlev" "Received Signal Level"
-        add_plain_info_entry "RSSNR" "$endc_lte_rssnr" "Radio Signal Strength Noise Ratio"
         add_plain_info_entry "CQI" "$endc_lte_cql" "Channel Quality Indicator"
         add_plain_info_entry "TX Power" "$endc_lte_tx_power" "TX Power"
         add_plain_info_entry "Srxlev" "$endc_lte_srxlev" "Serving Cell Receive Level"
+        add_plain_info_entry "TAC" "$endc_lte_tac" "Tracking area code of cell served by neighbor Enb"
+        add_bar_info_entry "RSRP" "$endc_lte_rsrp" "Reference Signal Received Power" -140 -44 dBm
+        add_bar_info_entry "RSRQ" "$endc_lte_rsrq" "Reference Signal Received Quality" -20 20 dBm
+        add_bar_info_entry "SINR" "$endc_lte_sinr" "Signal to Interference plus Noise Ratio Bandwidth" -23 40 dB
+        add_plain_info_entry "RxLev" "$endc_lte_rxlev" "Received Signal Level"
+        add_plain_info_entry "RSSNR" "$endc_lte_rssnr" "Radio Signal Strength Noise Ratio"
         add_plain_info_entry NR5G-NSA "NR5G-NSA" ""
-        add_plain_info_entry "MCC" "$endc_nr_mcc" "Mobile Country Code"
-        add_plain_info_entry "MNC" "$endc_nr_mnc" "Mobile Network Code"
-        add_plain_info_entry "Physical Cell ID" "$endc_nr_physical_cell_id" "Physical Cell ID"
-        add_plain_info_entry "ARFCN" "$endc_nr_arfcn" "Absolute Radio-Frequency Channel Number"
-        add_plain_info_entry "Band" "$endc_nr_band" "Band"
-        add_plain_info_entry "DL Bandwidth" "$endc_nr_dl_bandwidth" "DL Bandwidth"
         add_bar_info_entry "RSRP" "$endc_nr_rsrp" "Reference Signal Received Power" -187 -29 dBm
         add_bar_info_entry "RSRQ" "$endc_nr_rsrq" "Reference Signal Received Quality" -43 20 dBm
         add_bar_info_entry "SINR" "$endc_nr_sinr" "Signal to Interference plus Noise Ratio Bandwidth" -23 40 dB
-        add_plain_info_entry "SCS" "$endc_nr_scs" "SCS"
         ;;
     "LTE Mode")
         add_plain_info_entry "MCC" "$lte_mcc" "Mobile Country Code"
