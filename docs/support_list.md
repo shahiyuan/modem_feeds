@@ -4,6 +4,7 @@ Model | Platform | USB  | PCIe
 s10 | hisilicon |✔ usb(rndis) | ✘
 mt5700m-cn | hisilicon |✔ usb(ecm,ncm) | ✘
 mh5000-31 | hisilicon |✔ usb(ecm) | ✘
+mh5000-82m | unisoc |✔ usb(ecm,ncm,rndis) | ✘
 
 # quectel
 Model | Platform | USB  | PCIe 
