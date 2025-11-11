@@ -359,9 +359,9 @@ get_info()
 
 	#SIM卡信息
     sim_info
-    if [ "$sim_status" != "ready" ] [ -n "$sim_status" ]; then
+    if [ "$sim_status" != "ready" ]; then
         [ -n "$sim_status" ] && add_warning_message_entry "sim_status" "$sim_status" "SIM Error,Error code:" "warning"
-        [ -z "$sim_status" ] && add_warning_message_entry "sim_status" "Modem Offline" "Modem Offline" "warning"
+        [ -z "$sim_status" ] && add_warning_message_entry "sim_status" "" "Modem Offline" "warning"
         return
     fi
 
