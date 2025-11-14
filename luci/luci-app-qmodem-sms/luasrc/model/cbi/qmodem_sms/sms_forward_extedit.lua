@@ -100,6 +100,15 @@ webhook_headers = s2:option(Value, "webhook_headers", translate("Headers (option
 webhook_headers:depends("api_type", "webhook")
 webhook_headers.placeholder = "Authorization: Bearer token"
 
+webhook_format = s2:option(Value, "webhook_format", translate("Message Format (optional)"))
+webhook_format:depends("api_type", "webhook")
+webhook_format.placeholder = "{SENDER}/{CONTENT}({TIME})"
+webhook_format.description = translate("Custom message format using placeholders:") .. " {SENDER}, {CONTENT}, {TIME}"
+webhook_request_method = s2:option(ListValue, "webhook_request_method", translate("Request Method"))
+webhook_request_method:depends("api_type", "webhook")
+webhook_request_method:value("GET", "GET")
+webhook_request_method:value("POST", "POST")
+
 -- ServerChan 配置
 serverchan_token = s2:option(Value, "serverchan_token", translate("Token"))
 serverchan_token:depends("api_type", "serverchan")

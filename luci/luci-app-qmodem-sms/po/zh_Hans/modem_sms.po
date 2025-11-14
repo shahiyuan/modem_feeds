@@ -107,6 +107,15 @@ msgstr "Telegram机器人"
 msgid "Generic Webhook"
 msgstr "通用Webhook"
 
+msgid "Message Format (optional)"
+msgstr "消息格式（可选）"
+
+msgid "Custom message format using placeholders:"
+msgstr "使用占位符的自定义消息格式："
+
+msgid "Request Method"
+msgstr "请求方法"
+
 msgid "Custom Script"
 msgstr "自定义脚本"
 
