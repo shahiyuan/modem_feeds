@@ -63,20 +63,23 @@ fi
 
 
 if [ "$REQUEST_METHOD" = "POST" ]; then
-    CURL_PARAM="-X POST \"$WEBHOOK_URL\""
-    CURL_PARAM="$CURL_PARAM -d \"$payload\""
-    CURL_PARAM="$CURL_PARAM -H \"Content-Type: application/json\""
+    # Build curl arguments array-style for proper quoting
+    if [ -n "$HEADERS" ]; then
+        curl -X POST "$WEBHOOK_URL" -d "$payload" -H "Content-Type: application/json" -H "$HEADERS"
+    else
+        curl -X POST "$WEBHOOK_URL" -d "$payload" -H "Content-Type: application/json"
+    fi
 else
     # URL-encode payload for GET request
     # Use jq for reliable URL encoding
-    payload=$(printf '%s' "$payload" | jq -sRr @uri)
-    WEBHOOK_URL="$WEBHOOK_URL/$payload"
-    CURL_PARAM="\"$WEBHOOK_URL\""
+    encoded_payload=$(printf '%s' "$payload" | jq -sRr @uri)
+    full_url="${WEBHOOK_URL}/${encoded_payload}"
+    
+    if [ -n "$HEADERS" ]; then
+        curl "$full_url" -H "$HEADERS"
+    else
+        curl "$full_url"
+    fi
 fi
-[ -n "$HEADERS" ] && CURL_CMD="$CURL_CMD -H \"$HEADERS\""
-
-# Execute curl command
-echo "Executing curl command: curl $CURL_PARAM"
-curl $CURL_PARAM
 
 exit $?
