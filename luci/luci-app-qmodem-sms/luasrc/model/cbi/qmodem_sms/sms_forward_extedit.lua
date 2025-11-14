@@ -95,6 +95,7 @@ tg_chat_id.placeholder = "123456789"
 webhook_url = s2:option(Value, "webhook_url", translate("Webhook URL"))
 webhook_url:depends("api_type", "webhook")
 webhook_url.placeholder = "https://example.com/webhook"
+webhook_url.description = translate("URL of the webhook endpoint(Also supports placeholders:" ) .. "{SENDER}, {CONTENT}, {TIME})" .. translate(" and need to be URL encoded)")
 
 webhook_headers = s2:option(Value, "webhook_headers", translate("Headers (optional)"))
 webhook_headers:depends("api_type", "webhook")

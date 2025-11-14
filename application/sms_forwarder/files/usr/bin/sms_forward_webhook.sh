@@ -19,7 +19,7 @@ WEBHOOK_URL=$(echo "$API_CONFIG" | jq -r '.webhook_url' 2>/dev/null)
 HEADERS=$(echo "$API_CONFIG" | jq -r '.headers' 2>/dev/null)
 FORMAT=$(echo "$API_CONFIG" | jq -r '.format' 2>/dev/null)
 REQUEST_METHOD=$(echo "$API_CONFIG" | jq -r '.request_method' 2>/dev/null)
-
+echo "$API_CONFIG" | jq
 # Fallback to manual parsing if jq fails
 if [ -z "$WEBHOOK_URL" ] || [ "$WEBHOOK_URL" = "null" ]; then
     WEBHOOK_URL=$(echo "$API_CONFIG" | grep -o '"webhook_url":"[^"]*"' | cut -d'"' -f4)
@@ -38,24 +38,45 @@ fi
 if [ -z "$FORMAT" ] || [ "$FORMAT" = "null" ];then
     payload="$SMS_SENDER/$SMS_CONTENT($SMS_TIME)"
 else
-    payload=$(echo "$FORMAT" | sed "s/{SENDER}/$SMS_SENDER/g; s/{TIME}/$SMS_TIME/g; s/{CONTENT}/$SMS_CONTENT/g")
+    # Safe placeholder replacement using awk (handles all special characters)
+    payload=$(printf '%s' "$FORMAT" | awk -v sender="$SMS_SENDER" -v time="$SMS_TIME" -v content="$SMS_CONTENT" '
+    {
+        gsub(/\{SENDER\}/, sender)
+        gsub(/\{TIME\}/, time)
+        gsub(/\{CONTENT\}/, content)
+        print
+    }')
+    
+    WEBHOOK_URL=$(printf '%s' "$WEBHOOK_URL" | awk -v sender="$SMS_SENDER" -v time="$SMS_TIME" -v content="$SMS_CONTENT" '
+    {
+        gsub(/\{SENDER\}/, sender)
+        gsub(/\{TIME\}/, time)
+        gsub(/\{CONTENT\}/, content)
+        print
+    }')
 fi
+
 # Prepare curl command
 if [ -z "$REQUEST_METHOD" ] || [ "$REQUEST_METHOD" = "null" ]; then
     REQUEST_METHOD="GET"
 fi
-CURL_CMD="curl -s -X $REQUEST_METHOD"
-[ -n "$HEADERS" ] && CURL_CMD="$CURL_CMD -H \"$HEADERS\""
+
+
 if [ "$REQUEST_METHOD" = "POST" ]; then
+    CURL_CMD="curl -X POST \"$WEBHOOK_URL\""
     CURL_CMD="$CURL_CMD -d \"$payload\""
+    CURL_CMD="$CURL_CMD -H \"Content-Type: application/json\""
 else
-    # replay space and special characters in payload for URL
-    payload=$(echo "$payload" | sed 's/ /%20/g;s/!/%21/g;s/"/%22/g;s/#/%23/g;s/\$/%24/g;s/&/%26/g;s/'\''/%27/g;s/(/%28/g;s/)/%29/g;s/*/%2A/g;s/+/%2B/g;s/,/%2C/g;s/;/%3B/g;s/=/%3D/g;s/?/%3F/g;s/@/%40/g;s/\[/%5B/g;s/\\/%5C/g;s/\]/%5D/g;s/\^/%5E/g;s/_/%5F/g;s/`/%60/g;s/{/%7B/g;s/|/%7C/g;s/}/%7D/g;s/~/%7E/g')
+    # URL-encode payload for GET request
+    # Use jq for reliable URL encoding
+    payload=$(printf '%s' "$payload" | jq -sRr @uri)
     WEBHOOK_URL="$WEBHOOK_URL/$payload"
+    CURL_CMD="curl \"$WEBHOOK_URL\""
 fi
-CURL_CMD="$CURL_CMD \"$WEBHOOK_URL\""
+[ -n "$HEADERS" ] && CURL_CMD="$CURL_CMD -H \"$HEADERS\""
+
 # Execute curl command
 echo "Executing curl command: $CURL_CMD"
-eval $CURL_CMD
+#eval $CURL_CMD
 
 exit $?

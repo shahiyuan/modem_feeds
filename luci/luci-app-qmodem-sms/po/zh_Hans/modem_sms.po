@@ -107,6 +107,12 @@ msgstr "Telegram机器人"
 msgid "Generic Webhook"
 msgstr "通用Webhook"
 
+msgid "URL of the webhook endpoint(Also supports placeholders:"
+msgstr "webhook接口地址（也支持占位符："
+
+msgid " and need to be URL encoded)"
+msgstr "，需要进行URL编码）"
+
 msgid "Message Format (optional)"
 msgstr "消息格式（可选）"
 
