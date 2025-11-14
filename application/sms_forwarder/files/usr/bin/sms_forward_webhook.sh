@@ -17,6 +17,8 @@ fi
 # Extract configuration using jq or manual parsing
 WEBHOOK_URL=$(echo "$API_CONFIG" | jq -r '.webhook_url' 2>/dev/null)
 HEADERS=$(echo "$API_CONFIG" | jq -r '.headers' 2>/dev/null)
+FORMAT=$(echo "$API_CONFIG" | jq -r '.format' 2>/dev/null)
+REQUEST_METHOD=$(echo "$API_CONFIG" | jq -r '.request_method' 2>/dev/null)
 
 # Fallback to manual parsing if jq fails
 if [ -z "$WEBHOOK_URL" ] || [ "$WEBHOOK_URL" = "null" ]; then
@@ -32,68 +34,28 @@ if [ -z "$WEBHOOK_URL" ]; then
     exit 1
 fi
 
-# Prepare JSON payload using jq if available
-if command -v jq >/dev/null 2>&1; then
-    JSON_PAYLOAD=$(jq -n \
-        --arg type "sms" \
-        --arg title "QModem SMS: ($SMS_SENDER)" \
-        --arg timestamp "$SMS_TIME" \
-        --arg sender "$SMS_SENDER" \
-        --arg content "$SMS_CONTENT" \
-        '{
-            type: $type,
-            title: $title,
-            timestamp: $timestamp,
-            sender: $sender,
-            content: $content
-        }')
+# Prepare payload based on format
+if [ -z "$FORMAT" ] || [ "$FORMAT" = "null" ];then
+    payload="$SMS_SENDER/$SMS_CONTENT($SMS_TIME)"
 else
-    # Fallback JSON generation
-    JSON_PAYLOAD="{
-    \"type\": \"sms\",
-    \"title\": \"QModem SMS: ($SMS_SENDER)\",
-    \"timestamp\": \"$SMS_TIME\",
-    \"sender\": \"$SMS_SENDER\",
-    \"content\": \"$SMS_CONTENT\"
-}"
+    payload=$(echo "$FORMAT" | sed "s/{SENDER}/$SMS_SENDER/g; s/{TIME}/$SMS_TIME/g; s/{CONTENT}/$SMS_CONTENT/g")
 fi
-
-# Try curl first, then wget
-if command -v curl >/dev/null 2>&1; then
-    CURL_CMD="curl -X POST \"$WEBHOOK_URL\""
-    CURL_CMD="$CURL_CMD -H \"Content-Type: application/json\""
-    
-    # Add custom headers if provided
-    if [ -n "$HEADERS" ]; then
-        CURL_CMD="$CURL_CMD -H \"$HEADERS\""
-    fi
-    
-    CURL_CMD="$CURL_CMD -d '$JSON_PAYLOAD'"
-    CURL_CMD="$CURL_CMD --connect-timeout 10 --max-time 30"
-    
-    eval "$CURL_CMD"
-elif command -v wget >/dev/null 2>&1; then
-    # Create temporary file for POST data
-    TEMP_FILE=$(mktemp)
-    echo "$JSON_PAYLOAD" > "$TEMP_FILE"
-    
-    WGET_CMD="wget -O-"
-    WGET_CMD="$WGET_CMD --header=\"Content-Type: application/json\""
-    
-    # Add custom headers if provided
-    if [ -n "$HEADERS" ]; then
-        WGET_CMD="$WGET_CMD --header=\"$HEADERS\""
-    fi
-    
-    WGET_CMD="$WGET_CMD --post-file=\"$TEMP_FILE\""
-    WGET_CMD="$WGET_CMD --timeout=30"
-    WGET_CMD="$WGET_CMD \"$WEBHOOK_URL\""
-    
-    eval "$WGET_CMD"
-    rm -f "$TEMP_FILE"
+# Prepare curl command
+if [ -z "$REQUEST_METHOD" ] || [ "$REQUEST_METHOD" = "null" ]; then
+    REQUEST_METHOD="GET"
+fi
+CURL_CMD="curl -s -X $REQUEST_METHOD"
+[ -n "$HEADERS" ] && CURL_CMD="$CURL_CMD -H \"$HEADERS\""
+if [ "$REQUEST_METHOD" = "POST" ]; then
+    CURL_CMD="$CURL_CMD -d \"$payload\""
 else
-    echo "Error: Neither curl nor wget available"
-    exit 1
+    # replay space and special characters in payload for URL
+    payload=$(echo "$payload" | sed 's/ /%20/g;s/!/%21/g;s/"/%22/g;s/#/%23/g;s/\$/%24/g;s/&/%26/g;s/'\''/%27/g;s/(/%28/g;s/)/%29/g;s/*/%2A/g;s/+/%2B/g;s/,/%2C/g;s/;/%3B/g;s/=/%3D/g;s/?/%3F/g;s/@/%40/g;s/\[/%5B/g;s/\\/%5C/g;s/\]/%5D/g;s/\^/%5E/g;s/_/%5F/g;s/`/%60/g;s/{/%7B/g;s/|/%7C/g;s/}/%7D/g;s/~/%7E/g')
+    WEBHOOK_URL="$WEBHOOK_URL/$payload"
 fi
+CURL_CMD="$CURL_CMD \"$WEBHOOK_URL\""
+# Execute curl command
+echo "Executing curl command: $CURL_CMD"
+eval $CURL_CMD
 
 exit $?
