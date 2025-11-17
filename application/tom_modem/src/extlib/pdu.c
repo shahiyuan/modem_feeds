@@ -404,13 +404,7 @@ int pdu_decode(const unsigned char* buffer, int buffer_length,
 		case 2:
 			{
 				// UCS2
-				if (output_sms_text_length < sms_text_size) {
-					memcpy(output_sms_text, buffer + sms_start + 1, output_sms_text_length);
-					output_sms_text[output_sms_text_length] = '\0';
-				} else {
-					memcpy(output_sms_text, buffer + sms_start + 1, sms_text_size - 1);
-					output_sms_text[sms_text_size - 1] = '\0';
-				}
+				memcpy(output_sms_text, buffer + sms_start + 1, output_sms_text_length);
 				break;
 			}
 		default:
