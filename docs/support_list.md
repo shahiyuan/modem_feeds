@@ -62,6 +62,7 @@ fm350r-gl | mediatek |✔ usb(rndis) | ✔ pcie(mbim)
 rw350r-gl | mediatek |✔ usb(rndis) | ✔ pcie(mbim)
 fm150-ae | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi,mbim)
 fm160-cn | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
+fm160-eau | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 fm160-na | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✘
 fm190w-gl | qualcomm |✔ usb(qmi,gobinet,ecm,mbim,rndis,ncm) | ✔ pcie(qmi)
 l610-eu | unisoc |✔ usb(ecm,rndis,ncm) | ✘
