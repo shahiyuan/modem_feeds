@@ -3,14 +3,13 @@
 _Vendor="huawei"
 _Author="Lean"
 _Maintainer="Lean <coolsnowwolf@gmail.com>"
-source /usr/share/qmodem/generic.sh
-debug_subject="quectel_ctrl"
+. /usr/share/qmodem/generic.sh
+debug_subject="huawei_ctrl"
 
 vendor_get_disabled_features(){
     case "$platform" in
         *)
             json_add_string "" "LockBand"
-            json_add_string "" "NeighborCell"
             ;;
     esac
 }
@@ -22,7 +21,8 @@ function get_imei(){
 
 function set_imei(){
     imei=$1
-    at $at_port "at^phynum=IMEI,$imei"
+    res=$(at $at_port "at^phynum=IMEI,$imei")
+    json_add_string "result" "$res"
 }
 
 function get_mode(){
@@ -30,7 +30,7 @@ function get_mode(){
     
     case $platform in
         "unisoc")
-            local mode_num=$(echo -e "$cfg" | grep "^SETMODE"|grep -o '\d')
+            local mode_num=$(echo -e "$cfg" | grep "SETMODE"|grep -o '\d')
             case $mode_num in
                 "0") mode="rndis" ;;
                 "1") mode="ecm" ;;
@@ -77,7 +77,7 @@ function set_mode(){
                     mode_num="1"
                     ;;
                 "ncm")
-                    mode_num="0"
+                    mode_num="2"
                     ;;
             esac
             ;;
@@ -96,7 +96,8 @@ function set_mode(){
         ;;
     esac
 
-    at $at_port "AT^SETMODE=${mode_num}"
+    res=$(at $at_port "AT^SETMODE=${mode_num}")
+    json_add_string "cmd_result" "$res at $at_port "AT^SETMODE=${mode_num}""
 }
 
 function get_scs()
