@@ -391,15 +391,18 @@ cell_info()
             add_plain_info_entry "LTE_BAND" "$LTE_INFO_BAND" "LTE Band"
             add_plain_info_entry "LTE_DL" "$LTE_INFO_DL" "LTE DL"
             add_plain_info_entry "LTE_UL" "$LTE_INFO_UL" "LTE UL"
+            extra_info="LTE"
             add_bar_info_entry "RSRP" "$lte_rsrp" "Reference Signal Received Power" -140 -44 dBm
             add_bar_info_entry "RSRQ" "$lte_rsrq" "Reference Signal Received Quality" -44 3 dBm
             add_bar_info_entry "SINR" "$nr_sinr" "Signal to Interference plus Noise Ratio Bandwidth" -120 25 dBm
             add_bar_info_entry "RxLev" "$lte_rxlev" "Received Signal Level" -120 -25 dBm
+            unset extra_info
             #NR
             add_plain_info_entry "${nr_mode}_INFO" "$nr_mode" "$nr_mode Information"
             add_plain_info_entry "${nr_mode}_BAND" "$NR_INFO_BAND" "NR Band"
             add_plain_info_entry "${nr_mode}_DL" "$NR_INFO_DL" "$nr_mode DL"
             add_plain_info_entry "${nr_mode}_UL" "$NR_INFO_UL" "$nr_mode UL"
+            extra_info="$nr_mode"
             add_bar_info_entry "RSRP" "$nr_rsrp" "Reference Signal Received Power" -156 -31 dBm
             add_bar_info_entry "RSRQ" "$nr_rsrq" "Reference Signal Received Quality" -43 20 dBm
             add_bar_info_entry "SINR" "$nr_sinr" "Signal to Interference plus Noise Ratio Bandwidth" -23 40 dBm
@@ -407,6 +410,7 @@ cell_info()
             add_bar_info_entry "RSRP" "$second_nr_rsrp" "Reference Signal Received Power" -156 -31 dBm
             add_bar_info_entry "RSRQ" "$second_nr_rsrq" "Reference Signal Received Quality" -43 20 dBm
             add_bar_info_entry "SINR" "$second_nr_sinr" "Signal to Interference plus Noise Ratio Bandwidth" -23 40 dBm
+            unset extra_info
             ;;
         *)
             at_command="AT^MONSC"

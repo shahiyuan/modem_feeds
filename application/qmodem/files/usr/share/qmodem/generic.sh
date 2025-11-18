@@ -23,6 +23,9 @@ add_plain_info_entry()
         json_add_string "class" "$class"
         json_add_string "class_origin" "$class"
     fi
+    if [ -n "$extra_info" ]; then
+        json_add_string "extra_info" "$extra_info"
+    fi
     json_close_object
 }
 
@@ -45,6 +48,9 @@ add_warning_message_entry()
     json_add_string "type" "warning_message"
     json_add_string "class" "warning"
     json_add_string "class_origin" "warning"
+    if [ -n "$extra_info" ]; then
+        json_add_string "extra_info" "$extra_info"
+    fi
     json_close_object
 }
 
@@ -74,6 +80,9 @@ add_bar_info_entry()
     if [ -n "$class" ]; then
         json_add_string "class" "$class"
         json_add_string "class_origin" "$class"
+    fi
+    if [ -n "$extra_info" ]; then
+        json_add_string "extra_info" "$extra_info"
     fi
     json_close_object
 }
