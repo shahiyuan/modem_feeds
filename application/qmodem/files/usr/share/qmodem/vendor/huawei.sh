@@ -227,11 +227,15 @@ function sim_info()
 
     #SIM Status（SIM状态）
     at_command="AT+CPIN?"
-    sim_status=$(at $at_port $at_command | grep "+CPIN:")
-    sim_status=${sim_status:7:-1}
-    #lowercase
-    sim_status=$(echo $sim_status | tr  A-Z a-z)
-    
+    sim_status=$(at $at_port $at_command | grep -E "\+CPIN:|\+CME ERROR: 10")
+    if [[ "$sim_status" == "+CME ERROR:"* ]]; then
+        sim_status="not inserted"
+    else
+        sim_status=${sim_status:7:-1}
+        #lowercase
+        sim_status=$(echo $sim_status | tr  A-Z a-z)
+    fi
+
     #SIM Number（SIM卡号码，手机号）
     at_command="AT+CNUM"
     sim_number=$(at $at_port $at_command | grep "+CNUM: " | awk -F'"' '{print $2}')
@@ -464,10 +468,7 @@ cell_info()
 }
 
 function network_info() {
-    class="Network Information"
-    at_command="AT^SYSINFOEX"
-    res=$(at $at_port $at_command | grep "\^SYSINFOEX:" | awk -F'"' '{print $4}')
-    _parse_gstatus "$res"
+    return 0
 }
 
 function _get_lockband_nr(){
@@ -644,44 +645,4 @@ function _band_list_to_mask()
     low=$(printf "%016x" $low)
     high=$(printf "%016x" $high)
     echo "$low,$high"
-}
-
-function _parse_gstatus(){
-data=$1
-IFS=$'\t\r\n'
-for line in $data;do
-    line=${line//[$'\t\r\n']}
-    key=${line%%:*}
-    value=${line##*:}
-    key=${key}
-    #trim space at value
-    value=$(echo $value | xargs)
-    if [ -z "$value" ] || [ "$value" = "---" ]; then
-        continue
-    fi
-   
-    
-    case $key in
-    OK)
-        continue
-        ;;
-    *SINR*)
-        add_bar_info_entry "SINR" "$value" "$key" 0 30 dB
-        ;;
-    *RSRP*)
-        add_bar_info_entry "RSRP" "$value" "$key" -140 -44 dBm
-        ;;
-    *RSRQ*)
-        add_bar_info_entry "RSRQ" "$value" "$key" -19.5 -3 dB
-        ;;
-    *RSSI*)
-        add_bar_info_entry "RSSI" "$value" "$key" -120 -20 dBm
-        ;;
-    *)
-        add_plain_info_entry $key $value $key
-        ;;
-    esac
-    
-done
-unset IFS
 }
