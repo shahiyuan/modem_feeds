@@ -621,13 +621,11 @@ return {
 					pdu: request.args.pdu
 				});
 				
-				warn(`send_sms: Result: ${sprintf('%J', result)}\n`);
-				
-				// Check return code - 0 means success
-				let ret_code = result?.code != null ? result.code : -1;
-				let is_success = (ret_code === 0 && !result?.error);
-				
-				// Read sent database
+			warn(`send_sms: Result: ${sprintf('%J', result)}\n`);
+			
+			// Check status field from tom_modem output
+			// tom_modem returns {"status":"success"} on success or {"status":"failed","reason":"..."} on failure
+			let is_success = (result?.status === 'success');				// Read sent database
 				let db = readSmsDb(config.sms_db_path, config_section);
 				if (!db.sent)
 					db.sent = [];
