@@ -11,6 +11,9 @@ add_plain_info_entry()
     if [ -n "$class_overwrite" ]; then
         class="$class_overwrite"
     fi
+    if [ -z "$value" ]; then
+        return
+    fi
     json_add_object ""
     json_add_string  key "$key"
     json_add_string  value "$value"
@@ -31,6 +34,9 @@ add_warning_message_entry()
     class_overwrite=$4
     if [ -n "$class_overwrite" ]; then
         class="$class_overwrite"
+    fi
+    if [ -z "$value" ]; then
+        return
     fi
     json_add_object ""
     json_add_string  key "$key"
@@ -53,6 +59,9 @@ add_bar_info_entry()
     class_overwrite=$7
     if [ -n "$class_overwrite" ]; then
         class="$class_overwrite"
+    fi
+    if [ -z "$value" ]; then
+        return
     fi
     json_add_object ""
     json_add_string  key "$key"
@@ -95,6 +104,9 @@ add_avalible_band_entry()
 {
     band_id=$1
     band_name=$2
+    if [ -z "$band_id" ] || [ -z "$band_name" ]; then
+        return
+    fi
     json_add_object ""
     json_add_string  band_id "$band_id"
     json_add_string  band_name "$band_name"
