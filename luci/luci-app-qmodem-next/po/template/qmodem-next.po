@@ -1072,11 +1072,11 @@ msgid "Full scan failed"
 msgstr ""
 
 #: view/qmodem/settings.js:326
-msgid "GPIO Down Value"
+msgid "GPIO Value(Modem Power Down)"
 msgstr ""
 
-#: view/qmodem/settings.js:330
-msgid "GPIO Up Value"
+#: view/qmodem/settings.js:331
+msgid "GPIO Value(Modem Power Up)"
 msgstr ""
 
 #: view/qmodem/settings.js:322
@@ -2911,7 +2911,7 @@ msgstr ""
 #: view/qmodem/settings.js:271
 #: view/qmodem/settings.js:277
 #: view/qmodem/settings.js:328
-#: view/qmodem/settings.js:332
+#: view/qmodem/settings.js:333
 msgid "e.g."
 msgstr ""
 
