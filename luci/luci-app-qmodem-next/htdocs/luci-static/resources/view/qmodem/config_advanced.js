@@ -315,7 +315,7 @@ return view.extend({
 					'name': 'mode_' + modem.id,
 					'value': mode,
 					'id': 'mode_' + modem.id + '_' + mode,
-					'checked': mode === currentMode
+					'checked': mode === currentMode ? 'checked' : null
 				});
 				var label = E('label', {
 					'for': 'mode_' + modem.id + '_' + mode,
