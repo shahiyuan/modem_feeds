@@ -371,7 +371,12 @@ return view.extend({
 				var unreadIds = [];
 				result.messages.forEach(function(msg) {
 					if (msg.type === 'received' && msg.is_read === false) {
-						unreadIds.push(msg.id);
+						if (msg.part_ids && msg.part_ids.length > 0) {
+							// For multipart messages, mark all parts as read
+							unreadIds = unreadIds.concat(msg.part_ids);
+						} else {
+							unreadIds.push(msg.id);
+						}
 					}
 				});
 				if (unreadIds.length > 0) {
