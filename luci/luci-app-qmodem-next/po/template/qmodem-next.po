@@ -12,6 +12,20 @@ msgstr ""
 msgid "$key"
 msgstr ""
 
+#: view/qmodem/network_config.js:474
+#: view/qmodem/network_config.js:483
+#: view/qmodem/network_config.js:492
+#: view/qmodem/network_config.js:499
+msgid "(beta)"
+msgstr ""
+
+#: view/qmodem/network_config.js:475
+#: view/qmodem/network_config.js:484
+#: view/qmodem/network_config.js:493
+#: view/qmodem/network_config.js:500
+msgid "(still in beta)"
+msgstr ""
+
 #: view/qmodem/sms.js:450
 #: view/qmodem/sms_conversation.js:255
 msgid "16-bit (Unicode)"
@@ -67,6 +81,14 @@ msgstr ""
 #: vendor/telit.sh:164
 #: view/qmodem/settings.js:211
 msgid "AT Port"
+msgstr ""
+
+#: view/qmodem/network_config.js:493
+msgid "AT commands to execute after modem initialization."
+msgstr ""
+
+#: view/qmodem/network_config.js:500
+msgid "AT commands to execute before dialing."
 msgstr ""
 
 #: view/qmodem/config_advanced.js:743
@@ -160,7 +182,7 @@ msgstr ""
 msgid "Are you sure you want to change the IMEI to %s? This requires modem reboot."
 msgstr ""
 
-#: view/qmodem/network_config.js:908
+#: view/qmodem/network_config.js:940
 msgid "Are you sure you want to clear the dial log?"
 msgstr ""
 
@@ -271,7 +293,7 @@ msgstr ""
 msgid "Bridge Mode"
 msgstr ""
 
-#: view/qmodem/network_config.js:913
+#: view/qmodem/network_config.js:945
 #: view/qmodem/sms.js:474
 #: view/qmodem/sms_forward.js:303
 msgid "Cancel"
@@ -391,12 +413,12 @@ msgstr ""
 msgid "China Unicom (CN)"
 msgstr ""
 
-#: view/qmodem/network_config.js:835
+#: view/qmodem/network_config.js:867
 #: view/qmodem/sms_conversation.js:315
 msgid "Clear"
 msgstr ""
 
-#: view/qmodem/network_config.js:907
+#: view/qmodem/network_config.js:939
 msgid "Clear Dial Log"
 msgstr ""
 
@@ -408,7 +430,7 @@ msgstr ""
 msgid "Click \"Send AT Command\" to execute"
 msgstr ""
 
-#: view/qmodem/network_config.js:840
+#: view/qmodem/network_config.js:872
 msgid "Close"
 msgstr ""
 
@@ -471,7 +493,7 @@ msgstr ""
 msgid "Configured Ports"
 msgstr ""
 
-#: view/qmodem/network_config.js:935
+#: view/qmodem/network_config.js:967
 msgid "Confirm"
 msgstr ""
 
@@ -480,7 +502,7 @@ msgid "Connect Status"
 msgstr ""
 
 #: view/qmodem/network_config.js:203
-#: view/qmodem/network_config.js:610
+#: view/qmodem/network_config.js:642
 msgid "Connected"
 msgstr ""
 
@@ -592,6 +614,14 @@ msgstr ""
 msgid "Delay Start"
 msgstr ""
 
+#: view/qmodem/network_config.js:484
+msgid "Delay of executing AT command after modem initialization, in seconds."
+msgstr ""
+
+#: view/qmodem/network_config.js:475
+msgid "Delay of executing AT command before dialing, in seconds."
+msgstr ""
+
 #: view/qmodem/sms_conversation.js:536
 msgid "Delete"
 msgstr ""
@@ -613,7 +643,7 @@ msgstr ""
 msgid "DiGi (MY)"
 msgstr ""
 
-#: view/qmodem/network_config.js:555
+#: view/qmodem/network_config.js:587
 msgid "Dial"
 msgstr ""
 
@@ -627,7 +657,7 @@ msgid "Dial Control"
 msgstr ""
 
 #: view/qmodem/network_config.js:248
-#: view/qmodem/network_config.js:794
+#: view/qmodem/network_config.js:826
 msgid "Dial Log"
 msgstr ""
 
@@ -639,7 +669,7 @@ msgstr ""
 msgid "Dial Mode Configuration"
 msgstr ""
 
-#: view/qmodem/network_config.js:543
+#: view/qmodem/network_config.js:575
 msgid "Dial command sent successfully"
 msgstr ""
 
@@ -648,12 +678,12 @@ msgid "Dial disabled for this modem"
 msgstr ""
 
 #: view/qmodem/network_config.js:170
-#: view/qmodem/network_config.js:773
+#: view/qmodem/network_config.js:805
 msgid "Disable"
 msgstr ""
 
 #: view/qmodem/network_config.js:206
-#: view/qmodem/network_config.js:613
+#: view/qmodem/network_config.js:645
 msgid "Disconnected"
 msgstr ""
 
@@ -670,7 +700,7 @@ msgstr ""
 msgid "Do Not modify resolv.conf"
 msgstr ""
 
-#: view/qmodem/network_config.js:828
+#: view/qmodem/network_config.js:860
 msgid "Download"
 msgstr ""
 
@@ -735,7 +765,7 @@ msgid "Ec/No"
 msgstr ""
 
 #: view/qmodem/network_config.js:151
-#: view/qmodem/network_config.js:754
+#: view/qmodem/network_config.js:786
 #: view/qmodem/sms_forward.js:45
 msgid "Enable"
 msgstr ""
@@ -770,7 +800,7 @@ msgid "Enable to use Ubus AT daemon instead of direct serial port access"
 msgstr ""
 
 #: view/qmodem/network_config.js:76
-#: view/qmodem/network_config.js:682
+#: view/qmodem/network_config.js:714
 #: view/qmodem/settings.js:196
 msgid "Enabled"
 msgstr ""
@@ -782,6 +812,16 @@ msgstr ""
 
 #: vendor/huawei.sh:388
 msgid "Energy per Chip over Noise"
+msgstr ""
+
+#: view/qmodem/network_config.js:494
+#: view/qmodem/network_config.js:501
+msgid "Enter AT commands"
+msgstr ""
+
+#: view/qmodem/network_config.js:476
+#: view/qmodem/network_config.js:485
+msgid "Enter delay in seconds"
 msgstr ""
 
 #: view/qmodem/config_advanced.js:534
@@ -864,13 +904,13 @@ msgstr ""
 msgid "Error scanning neighbor cells: %s"
 msgstr ""
 
-#: view/qmodem/network_config.js:516
-#: view/qmodem/network_config.js:530
-#: view/qmodem/network_config.js:552
-#: view/qmodem/network_config.js:635
-#: view/qmodem/network_config.js:787
-#: view/qmodem/network_config.js:874
-#: view/qmodem/network_config.js:931
+#: view/qmodem/network_config.js:548
+#: view/qmodem/network_config.js:562
+#: view/qmodem/network_config.js:584
+#: view/qmodem/network_config.js:667
+#: view/qmodem/network_config.js:819
+#: view/qmodem/network_config.js:906
+#: view/qmodem/network_config.js:963
 msgid "Error: "
 msgstr ""
 
@@ -905,7 +945,7 @@ msgstr ""
 msgid "Failed to apply lock cell configuration"
 msgstr ""
 
-#: view/qmodem/network_config.js:927
+#: view/qmodem/network_config.js:959
 msgid "Failed to clear log"
 msgstr ""
 
@@ -915,16 +955,16 @@ msgid "Failed to delete SMS: "
 msgstr ""
 
 #: view/qmodem/network_config.js:166
-#: view/qmodem/network_config.js:769
+#: view/qmodem/network_config.js:801
 msgid "Failed to disable QModem Network: "
 msgstr ""
 
-#: view/qmodem/network_config.js:902
+#: view/qmodem/network_config.js:934
 msgid "Failed to download log: "
 msgstr ""
 
 #: view/qmodem/network_config.js:147
-#: view/qmodem/network_config.js:750
+#: view/qmodem/network_config.js:782
 msgid "Failed to enable QModem Network: "
 msgstr ""
 
@@ -948,7 +988,7 @@ msgstr ""
 msgid "Failed to load available modes"
 msgstr ""
 
-#: view/qmodem/network_config.js:866
+#: view/qmodem/network_config.js:898
 msgid "Failed to load log"
 msgstr ""
 
@@ -965,7 +1005,7 @@ msgid "Failed to load reboot capabilities"
 msgstr ""
 
 #: view/qmodem/network_config.js:68
-#: view/qmodem/network_config.js:781
+#: view/qmodem/network_config.js:813
 msgid "Failed to load status"
 msgstr ""
 
@@ -984,15 +1024,15 @@ msgstr ""
 msgid "Failed to send SMS: "
 msgstr ""
 
-#: view/qmodem/network_config.js:549
+#: view/qmodem/network_config.js:581
 msgid "Failed to send dial command"
 msgstr ""
 
-#: view/qmodem/network_config.js:513
+#: view/qmodem/network_config.js:545
 msgid "Failed to send hang command"
 msgstr ""
 
-#: view/qmodem/network_config.js:527
+#: view/qmodem/network_config.js:559
 msgid "Failed to send redial command"
 msgstr ""
 
@@ -1009,12 +1049,12 @@ msgid "Failed to set network preference"
 msgstr ""
 
 #: view/qmodem/network_config.js:104
-#: view/qmodem/network_config.js:707
+#: view/qmodem/network_config.js:739
 msgid "Failed to start QModem Network: "
 msgstr ""
 
 #: view/qmodem/network_config.js:123
-#: view/qmodem/network_config.js:726
+#: view/qmodem/network_config.js:758
 msgid "Failed to stop QModem Network: "
 msgstr ""
 
@@ -1105,11 +1145,11 @@ msgstr ""
 msgid "HTTP headers, one per line"
 msgstr ""
 
-#: view/qmodem/network_config.js:519
+#: view/qmodem/network_config.js:551
 msgid "Hang"
 msgstr ""
 
-#: view/qmodem/network_config.js:507
+#: view/qmodem/network_config.js:539
 msgid "Hang command sent successfully"
 msgstr ""
 
@@ -1348,7 +1388,7 @@ msgstr ""
 #: view/qmodem/debug.js:83
 #: view/qmodem/network_config.js:194
 #: view/qmodem/network_config.js:282
-#: view/qmodem/network_config.js:798
+#: view/qmodem/network_config.js:830
 #: view/qmodem/sms.js:184
 #: view/qmodem/sms.js:200
 #: view/qmodem/sms.js:208
@@ -1407,11 +1447,11 @@ msgstr ""
 msgid "Log Level"
 msgstr ""
 
-#: view/qmodem/network_config.js:920
+#: view/qmodem/network_config.js:952
 msgid "Log cleared successfully"
 msgstr ""
 
-#: view/qmodem/network_config.js:897
+#: view/qmodem/network_config.js:929
 msgid "Log downloaded successfully"
 msgstr ""
 
@@ -1706,8 +1746,8 @@ msgstr ""
 
 #: view/qmodem/network_config.js:76
 #: view/qmodem/network_config.js:77
-#: view/qmodem/network_config.js:682
-#: view/qmodem/network_config.js:683
+#: view/qmodem/network_config.js:714
+#: view/qmodem/network_config.js:715
 msgid "No"
 msgstr ""
 
@@ -1719,11 +1759,11 @@ msgstr ""
 msgid "No features available for this modem."
 msgstr ""
 
-#: view/qmodem/network_config.js:857
+#: view/qmodem/network_config.js:889
 msgid "No log available"
 msgstr ""
 
-#: view/qmodem/network_config.js:899
+#: view/qmodem/network_config.js:931
 msgid "No log content to download"
 msgstr ""
 
@@ -1977,12 +2017,28 @@ msgstr ""
 msgid "Poll Interval (seconds)"
 msgstr ""
 
+#: view/qmodem/network_config.js:492
+msgid "Post Init AT Commands"
+msgstr ""
+
+#: view/qmodem/network_config.js:483
+msgid "Post Init Delay"
+msgstr ""
+
 #: view/qmodem/settings.js:321
 msgid "Power GPIO"
 msgstr ""
 
 #: view/qmodem/config_advanced.js:1467
 msgid "Power cycles the modem completely. Takes longer but ensures a full restart."
+msgstr ""
+
+#: view/qmodem/network_config.js:499
+msgid "Pre Dial AT Commands"
+msgstr ""
+
+#: view/qmodem/network_config.js:474
+msgid "Pre Dial Delay"
 msgstr ""
 
 #: vendor/fibocom.sh:1514
@@ -2015,22 +2071,22 @@ msgid "QModem Network"
 msgstr ""
 
 #: view/qmodem/network_config.js:162
-#: view/qmodem/network_config.js:765
+#: view/qmodem/network_config.js:797
 msgid "QModem Network disabled successfully"
 msgstr ""
 
 #: view/qmodem/network_config.js:143
-#: view/qmodem/network_config.js:746
+#: view/qmodem/network_config.js:778
 msgid "QModem Network enabled successfully"
 msgstr ""
 
 #: view/qmodem/network_config.js:100
-#: view/qmodem/network_config.js:703
+#: view/qmodem/network_config.js:735
 msgid "QModem Network started successfully"
 msgstr ""
 
 #: view/qmodem/network_config.js:119
-#: view/qmodem/network_config.js:722
+#: view/qmodem/network_config.js:754
 msgid "QModem Network stopped successfully"
 msgstr ""
 
@@ -2072,7 +2128,7 @@ msgstr ""
 msgid "Radio Signal Strength Noise Ratio"
 msgstr ""
 
-#: view/qmodem/network_config.js:533
+#: view/qmodem/network_config.js:565
 msgid "ReDial"
 msgstr ""
 
@@ -2140,7 +2196,7 @@ msgstr ""
 msgid "Received Signal Strength Indicator"
 msgstr ""
 
-#: view/qmodem/network_config.js:525
+#: view/qmodem/network_config.js:557
 msgid "Redial command sent successfully"
 msgstr ""
 
@@ -2245,7 +2301,7 @@ msgid "Routing Area Code"
 msgstr ""
 
 #: view/qmodem/network_config.js:77
-#: view/qmodem/network_config.js:683
+#: view/qmodem/network_config.js:715
 msgid "Running"
 msgstr ""
 
@@ -2598,7 +2654,7 @@ msgid "Spreading Factor"
 msgstr ""
 
 #: view/qmodem/network_config.js:108
-#: view/qmodem/network_config.js:711
+#: view/qmodem/network_config.js:743
 msgid "Start"
 msgstr ""
 
@@ -2608,7 +2664,7 @@ msgid "Status"
 msgstr ""
 
 #: view/qmodem/network_config.js:127
-#: view/qmodem/network_config.js:730
+#: view/qmodem/network_config.js:762
 msgid "Stop"
 msgstr ""
 
@@ -2812,7 +2868,7 @@ msgstr ""
 #: view/qmodem/config_advanced.js:302
 #: view/qmodem/network_config.js:209
 #: view/qmodem/network_config.js:244
-#: view/qmodem/network_config.js:603
+#: view/qmodem/network_config.js:635
 msgid "Unknown"
 msgstr ""
 
@@ -2888,8 +2944,8 @@ msgstr ""
 
 #: view/qmodem/network_config.js:76
 #: view/qmodem/network_config.js:77
-#: view/qmodem/network_config.js:682
-#: view/qmodem/network_config.js:683
+#: view/qmodem/network_config.js:714
+#: view/qmodem/network_config.js:715
 msgid "Yes"
 msgstr ""
 
