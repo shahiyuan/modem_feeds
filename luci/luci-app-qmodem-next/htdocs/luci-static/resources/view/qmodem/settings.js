@@ -323,13 +323,15 @@ return view.extend({
 	o.optional = true;
 	o.modalonly = true;
 
-	o = s.option(form.Value, 'gpio_down', _('GPIO Down Value'));
-	o.depends('gpio', /\./);
+	o = s.option(form.Value, 'gpio_down', _('GPIO Value(Modem Power Down)'));
+	o.depends({gpio: /./ } );
 	o.placeholder = _('e.g.') + ' 0';
+	o.modalonly = true;
 
-	o = s.option(form.Value, 'gpio_up', _('GPIO Up Value'));
-	o.depends('gpio', /\./);
+	o = s.option(form.Value, 'gpio_up', _('GPIO Value(Modem Power Up)'));
+	o.depends({gpio: /./ } );
 	o.placeholder = _('e.g.') + ' 1';
+	o.modalonly = true;
 
 		return m.render();
 	}
