@@ -87,7 +87,7 @@ return view.extend({
 			
 			var buttons = [];
 			
-			// Running control: show Start if not running, show Stop if running
+			// Running control: show Start if not running, show Stop and Restart if running
 			if (!running) {
 				buttons.push(
 					E('button', {
@@ -125,6 +125,24 @@ return view.extend({
 								});
 						})
 					}, _('Stop'))
+				);
+				buttons.push(
+					E('button', {
+						'class': 'cbi-button cbi-button-apply',
+						'id': 'rc-restart-button',
+						'click': ui.createHandlerFn(this, function() {
+							var self = this;
+							return callInitAction('qmodem_network', 'restart')
+								.then(function() {
+									ui.addNotification(null, E('p', _('QModem Network restarted successfully')));
+									return self.updateRcStatus();
+								})
+								.catch(function(err) {
+									ui.addNotification(null, E('p', _('Failed to restart QModem Network: ') + err.message), 'error');
+									return self.updateRcStatus();
+								});
+						})
+					}, _('Restart'))
 				);
 			}
 			
@@ -722,7 +740,7 @@ return view.extend({
 
 				var buttons = [];
 
-				// Running control: show Start if not running, show Stop if running
+				// Running control: show Start if not running, show Stop and Restart if running
 				if (!running) {
 					buttons.push(
 						E('button', {
@@ -760,6 +778,24 @@ return view.extend({
 									});
 							})
 						}, _('Stop'))
+					);
+					buttons.push(
+						E('button', {
+							'class': 'cbi-button cbi-button-apply',
+							'id': 'rc-restart-button',
+							'click': ui.createHandlerFn(this, function() {
+								var self = this;
+								return callInitAction('qmodem_network', 'restart')
+									.then(function() {
+										ui.addNotification(null, E('p', _('QModem Network restarted successfully')));
+										return self.updateRcStatus();
+									})
+									.catch(function(err) {
+										ui.addNotification(null, E('p', _('Failed to restart QModem Network: ') + err.message), 'error');
+										return self.updateRcStatus();
+									});
+							})
+						}, _('Restart'))
 					);
 				}
 

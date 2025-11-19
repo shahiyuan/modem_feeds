@@ -15,6 +15,7 @@ msgid "7-bit (ASCII)"
 msgstr "7位（ASCII）"
 
 # Source: view/qmodem/network_config.js:195
+# Source: view/qmodem/network_config.js:346, view/qmodem/network_config.js:422
 msgid "APN"
 msgstr "APN"
 
@@ -27,6 +28,7 @@ msgid "AT Command"
 msgstr "AT命令"
 
 # Source: view/qmodem/debug.js:19
+# Source: view/qmodem/debug.js
 msgid "AT Debug"
 msgstr "AT 调试"
 
@@ -387,10 +389,12 @@ msgid "E-UTRA Absolute Radio Frequency Channel Number"
 msgstr "E-UTRA绝对射频信道号"
 
 # Source: vendor/fibocom.sh:1518, vendor/huawei.sh:581, vendor/meig.sh:627, vendor/neoway.sh:760, vendor/quectel.sh:1745, vendor/simcom.sh:1005
+# Source: vendor/fibocom.sh:1518, vendor/huawei.sh:582, vendor/meig.sh:627, vendor/neoway.sh:760, vendor/quectel.sh:1745, vendor/simcom.sh:1005
 msgid "Ec/Io"
 msgstr "Ec/Io"
 
 # Source: vendor/fibocom.sh:1519, vendor/huawei.sh:582, vendor/quectel.sh:1746
+# Source: vendor/fibocom.sh:1519, vendor/huawei.sh:583, vendor/quectel.sh:1746
 msgid "Ec/No"
 msgstr "Ec/No"
 
@@ -711,14 +715,17 @@ msgid "IMEI set successfully. Please reboot the modem for changes to take effect
 msgstr "IMEI设置成功。请重启调制解调器使更改生效。"
 
 # Source: view/qmodem/network_config.js:180
+# Source: view/qmodem/network_config.js:339
 msgid "IPv4"
 msgstr "IPv4"
 
 # Source: view/qmodem/network_config.js:182
+# Source: view/qmodem/network_config.js:341
 msgid "IPv4/IPv6"
 msgstr "IPv4/IPv6"
 
 # Source: view/qmodem/network_config.js:181
+# Source: view/qmodem/network_config.js:340
 msgid "IPv6"
 msgstr "IPv6"
 
@@ -1131,6 +1138,7 @@ msgid "PCI and ARFCN are required"
 msgstr "PCI和ARFCN为必填项"
 
 # Source: view/qmodem/settings.js:196
+# Source: view/qmodem/settings.js:248
 msgid "PCIe"
 msgstr "PCIe"
 
@@ -1227,6 +1235,7 @@ msgid "QModem Network stopped successfully"
 msgstr "QModem网络已成功停止"
 
 # Source: view/qmodem/settings.js:40
+# Source: view/qmodem/settings.js
 msgid "QModem Settings"
 msgstr "QModem 设置"
 
@@ -1355,6 +1364,7 @@ msgid "SMS AT Port"
 msgstr "短信AT端口"
 
 # Source: view/qmodem/sms_conversation.js:62
+# Source: view/qmodem/sms_conversation.js
 msgid "SMS Conversation"
 msgstr "短信对话"
 
@@ -1363,6 +1373,7 @@ msgid "SMS Database Path"
 msgstr "短信数据库路径"
 
 # Source: view/qmodem/sms.js:171
+# Source: view/qmodem/sms.js
 msgid "SMS Messages"
 msgstr "短信消息"
 
@@ -1583,6 +1594,7 @@ msgid "UL CA"
 msgstr "上行载波聚合"
 
 # Source: view/qmodem/settings.js:195
+# Source: view/qmodem/settings.js:247
 msgid "USB"
 msgstr "USB"
 
@@ -1674,41 +1686,13 @@ msgstr "概览"
 msgid "NetworkConfiguration"
 msgstr "网络配置"
 
-# Source: view/qmodem/debug.js
-msgid "AT Debug"
-msgstr "AT 调试"
-
 # Source: view/qmodem/config_advanced.js
 msgid "Advanced Modem Config"
 msgstr "高级调制解调器配置"
 
-# Source: view/qmodem/sms.js
-msgid "SMS Messages"
-msgstr "短信消息"
-
-# Source: view/qmodem/sms_conversation.js
-msgid "SMS Conversation"
-msgstr "短信对话"
-
-# Source: view/qmodem/settings.js
-msgid "QModem Settings"
-msgstr "QModem 设置"
-
-# Source: vendor/sierra.sh:437, vendor/sierra.sh:440, vendor/sierra.sh:443, vendor/sierra.sh:446
-msgid "$key"
-msgstr "$key"
-
 # Source: view/qmodem/network_config.js:364, view/qmodem/network_config.js:441
 msgid "A1 (AT)"
 msgstr "A1 (AT)"
-
-# Source: view/qmodem/network_config.js:346, view/qmodem/network_config.js:422
-msgid "APN"
-msgstr "APN"
-
-# Source: view/qmodem/config_advanced.js:737
-msgid "ARFCN"
-msgstr "ARFCN"
 
 # Source: view/qmodem/network_config.js:390
 msgid "Authentication Type"
@@ -1778,14 +1762,6 @@ msgstr "Drei (AT)"
 msgid "E-Plus (DE)"
 msgstr "E-Plus (DE)"
 
-# Source: vendor/fibocom.sh:1518, vendor/huawei.sh:581, vendor/meig.sh:627, vendor/neoway.sh:760, vendor/quectel.sh:1745, vendor/simcom.sh:1005
-msgid "Ec/Io"
-msgstr "Ec/Io"
-
-# Source: vendor/fibocom.sh:1519, vendor/huawei.sh:582, vendor/quectel.sh:1746
-msgid "Ec/No"
-msgstr "Ec/No"
-
 # Source: view/qmodem/network_config.js:166, view/qmodem/network_config.js:769
 msgid "Failed to disable QModem Network: "
 msgstr "禁用QModem网络失败："
@@ -1805,18 +1781,6 @@ msgstr "Globe 后付费 (PH)"
 # Source: view/qmodem/network_config.js:368, view/qmodem/network_config.js:445
 msgid "Globe Prepaid (PH)"
 msgstr "Globe 预付费 (PH)"
-
-# Source: view/qmodem/network_config.js:339
-msgid "IPv4"
-msgstr "IPv4"
-
-# Source: view/qmodem/network_config.js:341
-msgid "IPv4/IPv6"
-msgstr "IPv4/IPv6"
-
-# Source: view/qmodem/network_config.js:340
-msgid "IPv6"
-msgstr "IPv6"
 
 # Source: view/qmodem/network_config.js:305
 msgid "If enabled, the APN will be set even if it matches the current configuration.(only works with tom modified version of quectel-cm)"
@@ -1890,14 +1854,6 @@ msgstr "PAP/CHAP 密码"
 msgid "PAP/CHAP Username"
 msgstr "PAP/CHAP 用户名"
 
-# Source: view/qmodem/config_advanced.js:723
-msgid "PCI"
-msgstr "PCI"
-
-# Source: view/qmodem/settings.js:248
-msgid "PCIe"
-msgstr "PCIe"
-
 # Source: view/qmodem/network_config.js:334
 msgid "PDP Context Index"
 msgstr "PDP上下文索引"
@@ -1970,10 +1926,6 @@ msgstr "跃点数用于确定路由优先级，数值越小优先级越高，不
 msgid "UMobile (MY)"
 msgstr "UMobile (MY)"
 
-# Source: view/qmodem/settings.js:247
-msgid "USB"
-msgstr "USB"
-
 # Source: view/qmodem/network_config.js:379, view/qmodem/network_config.js:456
 msgid "Unifi (MY)"
 msgstr "Unifi (MY)"
@@ -2006,211 +1958,9 @@ msgstr "启用调制解调器软重启"
 msgid "quectel-CM will append the DNS server to the resolv.conf file by default.if you do not want to modify the resolv.conf file, please check this option."
 msgstr "默认情况下，quectel-CM会将DNS服务器追加到resolv.conf文件中。如不希望修改该文件，请勾选此选项。"
 
-# SMS Forwarder translations
 # Source: view/qmodem/sms_forward.js
 msgid "SMS Forwarder Configuration"
 msgstr "短信转发配置"
-
-msgid "Configure SMS forwarding to various notification services"
-msgstr "配置短信转发到各种通知服务"
-
-msgid "Global Settings"
-msgstr "全局设置"
-
-msgid "Enable SMS Forwarder"
-msgstr "启用短信转发"
-
-msgid "Log Level"
-msgstr "日志级别"
-
-msgid "Error"
-msgstr "错误"
-
-msgid "Warning"
-msgstr "警告"
-
-msgid "Info"
-msgstr "信息"
-
-msgid "Debug"
-msgstr "调试"
-
-msgid "Forward Instances"
-msgstr "转发实例"
-
-msgid "Configure SMS forwarding instances for different modems and services"
-msgstr "为不同的调制解调器和服务配置短信转发实例"
-
-msgid "Enable"
-msgstr "启用"
-
-msgid "Modem Config"
-msgstr "调制解调器配置"
-
-msgid "Poll Interval (seconds)"
-msgstr "轮询间隔（秒）"
-
-msgid "API Type"
-msgstr "API类型"
-
-msgid "Telegram Bot"
-msgstr "Telegram 机器人"
-
-msgid "Webhook"
-msgstr "Webhook"
-
-msgid "ServerChan"
-msgstr "Server酱"
-
-msgid "PushDeer"
-msgstr "PushDeer"
-
-msgid "Feishu Bot"
-msgstr "飞书机器人"
-
-msgid "Custom Script"
-msgstr "自定义脚本"
-
-msgid "Configure"
-msgstr "配置"
-
-msgid "Configure API"
-msgstr "配置API"
-
-msgid "Configure the API settings for "
-msgstr "配置API设置："
-
-msgid "Bot Token"
-msgstr "机器人令牌"
-
-msgid "Chat ID"
-msgstr "聊天ID"
-
-msgid "Webhook URL"
-msgstr "Webhook URL"
-
-msgid "Supports placeholders: {SENDER}, {CONTENT}, {TIME}"
-msgstr "支持占位符：{SENDER}（发送者）、{CONTENT}（内容）、{TIME}（时间）"
-
-msgid "Request Method"
-msgstr "请求方法"
-
-msgid "Message Format (optional)"
-msgstr "消息格式（可选）"
-
-msgid "Custom format using placeholders: {SENDER}, {CONTENT}, {TIME}"
-msgstr "使用占位符自定义格式：{SENDER}（发送者）、{CONTENT}（内容）、{TIME}（时间）"
-
-msgid "Headers (optional)"
-msgstr "HTTP头（可选）"
-
-msgid "HTTP headers, one per line"
-msgstr "HTTP头，每行一个"
-
-msgid "Token"
-msgstr "令牌"
-
-msgid "ServerChan API token from https://sctapi.ftqq.com"
-msgstr "Server酱 API 令牌，来自 https://sctapi.ftqq.com"
-
-msgid "Channel (optional)"
-msgstr "频道（可选）"
-
-msgid "Message channel, use | to separate multiple channels"
-msgstr "消息频道，使用 | 分隔多个频道"
-
-msgid "Hide IP"
-msgstr "隐藏IP"
-
-msgid "OpenID (optional)"
-msgstr "OpenID（可选）"
-
-msgid "OpenID for message forwarding, use comma to separate multiple IDs"
-msgstr "消息转发的OpenID，使用逗号分隔多个ID"
-
-msgid "Push Key"
-msgstr "推送密钥"
-
-msgid "PushDeer Push Key from http://pushdeer.com"
-msgstr "PushDeer 推送密钥，来自 http://pushdeer.com"
-
-msgid "Server (optional)"
-msgstr "服务器（可选）"
-
-msgid "Custom PushDeer API endpoint, leave empty to use default"
-msgstr "自定义 PushDeer API 端点，留空使用默认"
-
-msgid "Feishu webhook URL from your bot configuration"
-msgstr "来自机器人配置的飞书 webhook URL"
-
-msgid "Script Path"
-msgstr "脚本路径"
-
-msgid "Path to custom forwarding script. Script receives SMS_SENDER, SMS_TIME, SMS_CONTENT environment variables"
-msgstr "自定义转发脚本路径。脚本接收 SMS_SENDER、SMS_TIME、SMS_CONTENT 环境变量"
-
-msgid "Configure API Settings"
-msgstr "配置API设置"
-
-msgid "Cancel"
-msgstr "取消"
-
-msgid "Save"
-msgstr "保存"
-
-msgid "API configuration saved. Remember to save & apply changes."
-msgstr "API配置已保存。记得保存并应用更改。"
-
-msgid "SMS Forwarder"
-msgstr "短信转发"
-
-# Source: vendor/sierra.sh:437, vendor/sierra.sh:440, vendor/sierra.sh:443, vendor/sierra.sh:446
-msgid "$key"
-msgstr "$key"
-
-# Source: view/qmodem/network_config.js:364, view/qmodem/network_config.js:441
-msgid "A1 (AT)"
-msgstr "A1 (AT)"
-
-# Source: view/qmodem/network_config.js:346, view/qmodem/network_config.js:422
-msgid "APN"
-msgstr "APN"
-
-# Source: view/qmodem/config_advanced.js:737
-msgid "ARFCN"
-msgstr "ARFCN"
-
-# Source: view/qmodem/network_config.js:381, view/qmodem/network_config.js:458
-msgid "Beeline (RU)"
-msgstr "Beeline (RU)"
-
-# Source: view/qmodem/network_config.js:373, view/qmodem/network_config.js:450
-msgid "Celcom (MY)"
-msgstr "Celcom (MY)"
-
-# Source: view/qmodem/network_config.js:293
-msgid "DNS"
-msgstr "DNS"
-
-# Source: view/qmodem/network_config.js:374, view/qmodem/network_config.js:451
-msgid "DiGi (MY)"
-msgstr "DiGi (MY)"
-
-# Source: view/qmodem/network_config.js:365, view/qmodem/network_config.js:442
-msgid "Drei (AT)"
-msgstr "Drei (AT)"
-
-# Source: view/qmodem/network_config.js:362, view/qmodem/network_config.js:439
-msgid "E-Plus (DE)"
-msgstr "E-Plus (DE)"
-
-# Source: vendor/fibocom.sh:1518, vendor/huawei.sh:581, vendor/meig.sh:627, vendor/neoway.sh:760, vendor/quectel.sh:1745, vendor/simcom.sh:1005
-msgid "Ec/Io"
-msgstr "Ec/Io"
-
-# Source: vendor/fibocom.sh:1519, vendor/huawei.sh:582, vendor/quectel.sh:1746
-msgid "Ec/No"
-msgstr "Ec/No"
 
 # Source: view/qmodem/settings.js:326
 msgid "GPIO Value(Modem Power Down)"
@@ -2220,97 +1970,9 @@ msgstr "GPIO值（调制解调器断电）"
 msgid "GPIO Value(Modem Power Up)"
 msgstr "GPIO值（调制解调器通电）"
 
-# Source: view/qmodem/network_config.js:339
-msgid "IPv4"
-msgstr "IPv4"
-
-# Source: view/qmodem/network_config.js:341
-msgid "IPv4/IPv6"
-msgstr "IPv4/IPv6"
-
-# Source: view/qmodem/network_config.js:340
-msgid "IPv6"
-msgstr "IPv6"
-
-# Source: view/qmodem/network_config.js:382, view/qmodem/network_config.js:459
-msgid "MTS (RU)"
-msgstr "MTS (RU)"
-
-# Source: view/qmodem/network_config.js:366, view/qmodem/network_config.js:443
-msgid "Magenta (AT)"
-msgstr "Magenta (AT)"
-
-# Source: view/qmodem/network_config.js:376, view/qmodem/network_config.js:453
-msgid "Maxis UT (MY)"
-msgstr "Maxis UT (MY)"
-
-# Source: view/qmodem/network_config.js:375, view/qmodem/network_config.js:452
-msgid "Maxis | Hotlink (MY)"
-msgstr "Maxis | Hotlink (MY)"
-
-# Source: view/qmodem/network_config.js:383, view/qmodem/network_config.js:460
-msgid "Megafon (RU)"
-msgstr "Megafon (RU)"
-
-# Source: view/qmodem/config_advanced.js:723
-msgid "PCI"
-msgstr "PCI"
-
-# Source: view/qmodem/settings.js:248
-msgid "PCIe"
-msgstr "PCIe"
-
 # Source: view/qmodem/sms_forward.js:66
 msgid "PushDeer"
 msgstr "PushDeer"
-
-# Source: view/qmodem/network_config.js:387, view/qmodem/network_config.js:464
-msgid "Rostelecom (RU)"
-msgstr "Rostelecom (RU)"
-
-# Source: view/qmodem/network_config.js:388, view/qmodem/network_config.js:465
-msgid "Sber Mobile (RU)"
-msgstr "Sber Mobile (RU)"
-
-# Source: view/qmodem/network_config.js:355, view/qmodem/network_config.js:432
-msgid "Skytone (CN)"
-msgstr "Skytone (CN)"
-
-# Source: view/qmodem/network_config.js:370, view/qmodem/network_config.js:447
-msgid "Smart Communications (PH)"
-msgstr "Smart Communications (PH)"
-
-# Source: view/qmodem/network_config.js:357, view/qmodem/network_config.js:434
-msgid "Swisscom (CH)"
-msgstr "Swisscom (CH)"
-
-# Source: view/qmodem/network_config.js:386, view/qmodem/network_config.js:463
-msgid "T-mobile (RU)"
-msgstr "T-mobile (RU)"
-
-# Source: view/qmodem/network_config.js:384, view/qmodem/network_config.js:461
-msgid "Tele2 (RU)"
-msgstr "Tele2 (RU)"
-
-# Source: view/qmodem/network_config.js:361, view/qmodem/network_config.js:438
-msgid "Telekom (DE)"
-msgstr "Telekom (DE)"
-
-# Source: view/qmodem/network_config.js:378, view/qmodem/network_config.js:455
-msgid "UMobile (MY)"
-msgstr "UMobile (MY)"
-
-# Source: view/qmodem/settings.js:247
-msgid "USB"
-msgstr "USB"
-
-# Source: view/qmodem/network_config.js:379, view/qmodem/network_config.js:456
-msgid "Unifi (MY)"
-msgstr "Unifi (MY)"
-
-# Source: view/qmodem/network_config.js:360, view/qmodem/network_config.js:437
-msgid "Vodafone (DE)"
-msgstr "Vodafone (DE)"
 
 # Source: view/qmodem/sms_forward.js:64
 msgid "Webhook"
@@ -2320,18 +1982,6 @@ msgstr "Webhook"
 msgid "Webhook URL"
 msgstr "Webhook URL"
 
-# Source: view/qmodem/network_config.js:377, view/qmodem/network_config.js:454
-msgid "YES (MY)"
-msgstr "YES (MY)"
-
-# Source: view/qmodem/network_config.js:385, view/qmodem/network_config.js:462
-msgid "Yota (RU)"
-msgstr "Yota (RU)"
-
-# Source: vendor/sierra.sh:437, vendor/sierra.sh:440, vendor/sierra.sh:443, vendor/sierra.sh:446
-msgid "$key"
-msgstr "$key"
-
 # Source: view/qmodem/network_config.js:474, view/qmodem/network_config.js:483, view/qmodem/network_config.js:492, view/qmodem/network_config.js:499
 msgid "(beta)"
 msgstr "(测试版)"
@@ -2339,18 +1989,6 @@ msgstr "(测试版)"
 # Source: view/qmodem/network_config.js:475, view/qmodem/network_config.js:484, view/qmodem/network_config.js:493, view/qmodem/network_config.js:500
 msgid "(still in beta)"
 msgstr "(仍为测试版)"
-
-# Source: view/qmodem/network_config.js:364, view/qmodem/network_config.js:441
-msgid "A1 (AT)"
-msgstr "A1 (AT)"
-
-# Source: view/qmodem/network_config.js:346, view/qmodem/network_config.js:422
-msgid "APN"
-msgstr "APN"
-
-# Source: view/qmodem/config_advanced.js:737
-msgid "ARFCN"
-msgstr "ARFCN"
 
 # Source: view/qmodem/network_config.js:493
 msgid "AT commands to execute after modem initialization."
@@ -2360,18 +1998,6 @@ msgstr "模组初始化后执行的AT指令。"
 msgid "AT commands to execute before dialing."
 msgstr "拨号前执行的AT指令。"
 
-# Source: view/qmodem/network_config.js:381, view/qmodem/network_config.js:458
-msgid "Beeline (RU)"
-msgstr "Beeline (RU)"
-
-# Source: view/qmodem/network_config.js:373, view/qmodem/network_config.js:450
-msgid "Celcom (MY)"
-msgstr "Celcom (MY)"
-
-# Source: view/qmodem/network_config.js:293
-msgid "DNS"
-msgstr "DNS"
-
 # Source: view/qmodem/network_config.js:484
 msgid "Delay of executing AT command after modem initialization, in seconds."
 msgstr "模组初始化后执行AT指令的延迟时间（秒）。"
@@ -2380,26 +2006,6 @@ msgstr "模组初始化后执行AT指令的延迟时间（秒）。"
 msgid "Delay of executing AT command before dialing, in seconds."
 msgstr "拨号前执行AT指令的延迟时间（秒）。"
 
-# Source: view/qmodem/network_config.js:374, view/qmodem/network_config.js:451
-msgid "DiGi (MY)"
-msgstr "DiGi (MY)"
-
-# Source: view/qmodem/network_config.js:365, view/qmodem/network_config.js:442
-msgid "Drei (AT)"
-msgstr "Drei (AT)"
-
-# Source: view/qmodem/network_config.js:362, view/qmodem/network_config.js:439
-msgid "E-Plus (DE)"
-msgstr "E-Plus (DE)"
-
-# Source: vendor/fibocom.sh:1518, vendor/huawei.sh:582, vendor/meig.sh:627, vendor/neoway.sh:760, vendor/quectel.sh:1745, vendor/simcom.sh:1005
-msgid "Ec/Io"
-msgstr "Ec/Io"
-
-# Source: vendor/fibocom.sh:1519, vendor/huawei.sh:583, vendor/quectel.sh:1746
-msgid "Ec/No"
-msgstr "Ec/No"
-
 # Source: view/qmodem/network_config.js:494, view/qmodem/network_config.js:501
 msgid "Enter AT commands"
 msgstr "输入AT指令"
@@ -2407,46 +2013,6 @@ msgstr "输入AT指令"
 # Source: view/qmodem/network_config.js:476, view/qmodem/network_config.js:485
 msgid "Enter delay in seconds"
 msgstr "输入延迟时间（秒）"
-
-# Source: view/qmodem/network_config.js:339
-msgid "IPv4"
-msgstr "IPv4"
-
-# Source: view/qmodem/network_config.js:341
-msgid "IPv4/IPv6"
-msgstr "IPv4/IPv6"
-
-# Source: view/qmodem/network_config.js:340
-msgid "IPv6"
-msgstr "IPv6"
-
-# Source: view/qmodem/network_config.js:382, view/qmodem/network_config.js:459
-msgid "MTS (RU)"
-msgstr "MTS (RU)"
-
-# Source: view/qmodem/network_config.js:366, view/qmodem/network_config.js:443
-msgid "Magenta (AT)"
-msgstr "Magenta (AT)"
-
-# Source: view/qmodem/network_config.js:376, view/qmodem/network_config.js:453
-msgid "Maxis UT (MY)"
-msgstr "Maxis UT (MY)"
-
-# Source: view/qmodem/network_config.js:375, view/qmodem/network_config.js:452
-msgid "Maxis | Hotlink (MY)"
-msgstr "Maxis | Hotlink (MY)"
-
-# Source: view/qmodem/network_config.js:383, view/qmodem/network_config.js:460
-msgid "Megafon (RU)"
-msgstr "Megafon (RU)"
-
-# Source: view/qmodem/config_advanced.js:723
-msgid "PCI"
-msgstr "PCI"
-
-# Source: view/qmodem/settings.js:248
-msgid "PCIe"
-msgstr "PCIe"
 
 # Source: view/qmodem/network_config.js:492
 msgid "Post Init AT Commands"
@@ -2464,70 +2030,14 @@ msgstr "拨号前AT指令"
 msgid "Pre Dial Delay"
 msgstr "拨号前延迟"
 
-# Source: view/qmodem/sms_forward.js:66
-msgid "PushDeer"
-msgstr "PushDeer"
+# Source: view/qmodem/network_config.js:141, view/qmodem/network_config.js:794
+msgid "Failed to restart QModem Network: "
+msgstr "重启QModem网络失败："
 
-# Source: view/qmodem/network_config.js:387, view/qmodem/network_config.js:464
-msgid "Rostelecom (RU)"
-msgstr "Rostelecom (RU)"
+# Source: view/qmodem/network_config.js:137, view/qmodem/network_config.js:790
+msgid "QModem Network restarted successfully"
+msgstr "QModem网络已成功重启"
 
-# Source: view/qmodem/network_config.js:388, view/qmodem/network_config.js:465
-msgid "Sber Mobile (RU)"
-msgstr "Sber Mobile (RU)"
-
-# Source: view/qmodem/network_config.js:355, view/qmodem/network_config.js:432
-msgid "Skytone (CN)"
-msgstr "天际通 (CN)"
-
-# Source: view/qmodem/network_config.js:370, view/qmodem/network_config.js:447
-msgid "Smart Communications (PH)"
-msgstr "Smart Communications (PH)"
-
-# Source: view/qmodem/network_config.js:357, view/qmodem/network_config.js:434
-msgid "Swisscom (CH)"
-msgstr "Swisscom (CH)"
-
-# Source: view/qmodem/network_config.js:386, view/qmodem/network_config.js:463
-msgid "T-mobile (RU)"
-msgstr "T-mobile (RU)"
-
-# Source: view/qmodem/network_config.js:384, view/qmodem/network_config.js:461
-msgid "Tele2 (RU)"
-msgstr "Tele2 (RU)"
-
-# Source: view/qmodem/network_config.js:361, view/qmodem/network_config.js:438
-msgid "Telekom (DE)"
-msgstr "Telekom (DE)"
-
-# Source: view/qmodem/network_config.js:378, view/qmodem/network_config.js:455
-msgid "UMobile (MY)"
-msgstr "UMobile (MY)"
-
-# Source: view/qmodem/settings.js:247
-msgid "USB"
-msgstr "USB"
-
-# Source: view/qmodem/network_config.js:379, view/qmodem/network_config.js:456
-msgid "Unifi (MY)"
-msgstr "Unifi (MY)"
-
-# Source: view/qmodem/network_config.js:360, view/qmodem/network_config.js:437
-msgid "Vodafone (DE)"
-msgstr "Vodafone (DE)"
-
-# Source: view/qmodem/sms_forward.js:64
-msgid "Webhook"
-msgstr "Webhook"
-
-# Source: view/qmodem/sms_forward.js:129, view/qmodem/sms_forward.js:267
-msgid "Webhook URL"
-msgstr "Webhook URL"
-
-# Source: view/qmodem/network_config.js:377, view/qmodem/network_config.js:454
-msgid "YES (MY)"
-msgstr "YES (MY)"
-
-# Source: view/qmodem/network_config.js:385, view/qmodem/network_config.js:462
-msgid "Yota (RU)"
-msgstr "Yota (RU)"
+# Source: view/qmodem/network_config.js:145, view/qmodem/network_config.js:798
+msgid "Restart"
+msgstr "重启"
