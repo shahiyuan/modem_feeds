@@ -2327,3 +2327,207 @@ msgstr "YES (MY)"
 # Source: view/qmodem/network_config.js:385, view/qmodem/network_config.js:462
 msgid "Yota (RU)"
 msgstr "Yota (RU)"
+
+# Source: vendor/sierra.sh:437, vendor/sierra.sh:440, vendor/sierra.sh:443, vendor/sierra.sh:446
+msgid "$key"
+msgstr "$key"
+
+# Source: view/qmodem/network_config.js:474, view/qmodem/network_config.js:483, view/qmodem/network_config.js:492, view/qmodem/network_config.js:499
+msgid "(beta)"
+msgstr "(测试版)"
+
+# Source: view/qmodem/network_config.js:475, view/qmodem/network_config.js:484, view/qmodem/network_config.js:493, view/qmodem/network_config.js:500
+msgid "(still in beta)"
+msgstr "(仍为测试版)"
+
+# Source: view/qmodem/network_config.js:364, view/qmodem/network_config.js:441
+msgid "A1 (AT)"
+msgstr "A1 (AT)"
+
+# Source: view/qmodem/network_config.js:346, view/qmodem/network_config.js:422
+msgid "APN"
+msgstr "APN"
+
+# Source: view/qmodem/config_advanced.js:737
+msgid "ARFCN"
+msgstr "ARFCN"
+
+# Source: view/qmodem/network_config.js:493
+msgid "AT commands to execute after modem initialization."
+msgstr "模组初始化后执行的AT指令。"
+
+# Source: view/qmodem/network_config.js:500
+msgid "AT commands to execute before dialing."
+msgstr "拨号前执行的AT指令。"
+
+# Source: view/qmodem/network_config.js:381, view/qmodem/network_config.js:458
+msgid "Beeline (RU)"
+msgstr "Beeline (RU)"
+
+# Source: view/qmodem/network_config.js:373, view/qmodem/network_config.js:450
+msgid "Celcom (MY)"
+msgstr "Celcom (MY)"
+
+# Source: view/qmodem/network_config.js:293
+msgid "DNS"
+msgstr "DNS"
+
+# Source: view/qmodem/network_config.js:484
+msgid "Delay of executing AT command after modem initialization, in seconds."
+msgstr "模组初始化后执行AT指令的延迟时间（秒）。"
+
+# Source: view/qmodem/network_config.js:475
+msgid "Delay of executing AT command before dialing, in seconds."
+msgstr "拨号前执行AT指令的延迟时间（秒）。"
+
+# Source: view/qmodem/network_config.js:374, view/qmodem/network_config.js:451
+msgid "DiGi (MY)"
+msgstr "DiGi (MY)"
+
+# Source: view/qmodem/network_config.js:365, view/qmodem/network_config.js:442
+msgid "Drei (AT)"
+msgstr "Drei (AT)"
+
+# Source: view/qmodem/network_config.js:362, view/qmodem/network_config.js:439
+msgid "E-Plus (DE)"
+msgstr "E-Plus (DE)"
+
+# Source: vendor/fibocom.sh:1518, vendor/huawei.sh:582, vendor/meig.sh:627, vendor/neoway.sh:760, vendor/quectel.sh:1745, vendor/simcom.sh:1005
+msgid "Ec/Io"
+msgstr "Ec/Io"
+
+# Source: vendor/fibocom.sh:1519, vendor/huawei.sh:583, vendor/quectel.sh:1746
+msgid "Ec/No"
+msgstr "Ec/No"
+
+# Source: view/qmodem/network_config.js:494, view/qmodem/network_config.js:501
+msgid "Enter AT commands"
+msgstr "输入AT指令"
+
+# Source: view/qmodem/network_config.js:476, view/qmodem/network_config.js:485
+msgid "Enter delay in seconds"
+msgstr "输入延迟时间（秒）"
+
+# Source: view/qmodem/network_config.js:339
+msgid "IPv4"
+msgstr "IPv4"
+
+# Source: view/qmodem/network_config.js:341
+msgid "IPv4/IPv6"
+msgstr "IPv4/IPv6"
+
+# Source: view/qmodem/network_config.js:340
+msgid "IPv6"
+msgstr "IPv6"
+
+# Source: view/qmodem/network_config.js:382, view/qmodem/network_config.js:459
+msgid "MTS (RU)"
+msgstr "MTS (RU)"
+
+# Source: view/qmodem/network_config.js:366, view/qmodem/network_config.js:443
+msgid "Magenta (AT)"
+msgstr "Magenta (AT)"
+
+# Source: view/qmodem/network_config.js:376, view/qmodem/network_config.js:453
+msgid "Maxis UT (MY)"
+msgstr "Maxis UT (MY)"
+
+# Source: view/qmodem/network_config.js:375, view/qmodem/network_config.js:452
+msgid "Maxis | Hotlink (MY)"
+msgstr "Maxis | Hotlink (MY)"
+
+# Source: view/qmodem/network_config.js:383, view/qmodem/network_config.js:460
+msgid "Megafon (RU)"
+msgstr "Megafon (RU)"
+
+# Source: view/qmodem/config_advanced.js:723
+msgid "PCI"
+msgstr "PCI"
+
+# Source: view/qmodem/settings.js:248
+msgid "PCIe"
+msgstr "PCIe"
+
+# Source: view/qmodem/network_config.js:492
+msgid "Post Init AT Commands"
+msgstr "初始化后AT指令"
+
+# Source: view/qmodem/network_config.js:483
+msgid "Post Init Delay"
+msgstr "初始化后延迟"
+
+# Source: view/qmodem/network_config.js:499
+msgid "Pre Dial AT Commands"
+msgstr "拨号前AT指令"
+
+# Source: view/qmodem/network_config.js:474
+msgid "Pre Dial Delay"
+msgstr "拨号前延迟"
+
+# Source: view/qmodem/sms_forward.js:66
+msgid "PushDeer"
+msgstr "PushDeer"
+
+# Source: view/qmodem/network_config.js:387, view/qmodem/network_config.js:464
+msgid "Rostelecom (RU)"
+msgstr "Rostelecom (RU)"
+
+# Source: view/qmodem/network_config.js:388, view/qmodem/network_config.js:465
+msgid "Sber Mobile (RU)"
+msgstr "Sber Mobile (RU)"
+
+# Source: view/qmodem/network_config.js:355, view/qmodem/network_config.js:432
+msgid "Skytone (CN)"
+msgstr "天际通 (CN)"
+
+# Source: view/qmodem/network_config.js:370, view/qmodem/network_config.js:447
+msgid "Smart Communications (PH)"
+msgstr "Smart Communications (PH)"
+
+# Source: view/qmodem/network_config.js:357, view/qmodem/network_config.js:434
+msgid "Swisscom (CH)"
+msgstr "Swisscom (CH)"
+
+# Source: view/qmodem/network_config.js:386, view/qmodem/network_config.js:463
+msgid "T-mobile (RU)"
+msgstr "T-mobile (RU)"
+
+# Source: view/qmodem/network_config.js:384, view/qmodem/network_config.js:461
+msgid "Tele2 (RU)"
+msgstr "Tele2 (RU)"
+
+# Source: view/qmodem/network_config.js:361, view/qmodem/network_config.js:438
+msgid "Telekom (DE)"
+msgstr "Telekom (DE)"
+
+# Source: view/qmodem/network_config.js:378, view/qmodem/network_config.js:455
+msgid "UMobile (MY)"
+msgstr "UMobile (MY)"
+
+# Source: view/qmodem/settings.js:247
+msgid "USB"
+msgstr "USB"
+
+# Source: view/qmodem/network_config.js:379, view/qmodem/network_config.js:456
+msgid "Unifi (MY)"
+msgstr "Unifi (MY)"
+
+# Source: view/qmodem/network_config.js:360, view/qmodem/network_config.js:437
+msgid "Vodafone (DE)"
+msgstr "Vodafone (DE)"
+
+# Source: view/qmodem/sms_forward.js:64
+msgid "Webhook"
+msgstr "Webhook"
+
+# Source: view/qmodem/sms_forward.js:129, view/qmodem/sms_forward.js:267
+msgid "Webhook URL"
+msgstr "Webhook URL"
+
+# Source: view/qmodem/network_config.js:377, view/qmodem/network_config.js:454
+msgid "YES (MY)"
+msgstr "YES (MY)"
+
+# Source: view/qmodem/network_config.js:385, view/qmodem/network_config.js:462
+msgid "Yota (RU)"
+msgstr "Yota (RU)"
