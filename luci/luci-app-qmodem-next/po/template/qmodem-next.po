@@ -592,11 +592,11 @@ msgstr ""
 msgid "Delay Start"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:531
+#: view/qmodem/sms_conversation.js:536
 msgid "Delete"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:526
+#: view/qmodem/sms_conversation.js:531
 msgid "Delete this message?"
 msgstr ""
 
@@ -828,7 +828,7 @@ msgstr ""
 msgid "Error loading lock band configuration:"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:409
+#: view/qmodem/sms_conversation.js:414
 msgid "Error loading messages: "
 msgstr ""
 
@@ -893,7 +893,7 @@ msgstr ""
 msgid "Extend Prefix"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:516
+#: view/qmodem/sms_conversation.js:521
 msgid "Failed"
 msgstr ""
 
@@ -909,8 +909,8 @@ msgstr ""
 msgid "Failed to clear log"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:572
-#: view/qmodem/sms_conversation.js:583
+#: view/qmodem/sms_conversation.js:577
+#: view/qmodem/sms_conversation.js:588
 msgid "Failed to delete SMS: "
 msgstr ""
 
@@ -952,7 +952,7 @@ msgstr ""
 msgid "Failed to load log"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:420
+#: view/qmodem/sms_conversation.js:425
 msgid "Failed to load messages: "
 msgstr ""
 
@@ -973,7 +973,7 @@ msgstr ""
 msgid "Failed to save configuration: "
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:515
+#: view/qmodem/sms_conversation.js:520
 msgid "Failed to send"
 msgstr ""
 
@@ -1185,7 +1185,7 @@ msgstr ""
 msgid "If the PIN code is not set, leave it blank."
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:506
+#: view/qmodem/sms_conversation.js:511
 msgid "Incomplete (part "
 msgstr ""
 
@@ -1358,7 +1358,7 @@ msgstr ""
 #: view/qmodem/sms_conversation.js:190
 #: view/qmodem/sms_conversation.js:198
 #: view/qmodem/sms_conversation.js:206
-#: view/qmodem/sms_conversation.js:579
+#: view/qmodem/sms_conversation.js:584
 msgid "Loading..."
 msgstr ""
 
@@ -1466,7 +1466,7 @@ msgstr ""
 msgid "Message channel, use | to separate multiple channels"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:576
+#: view/qmodem/sms_conversation.js:581
 msgid "Message deleted"
 msgstr ""
 
@@ -1616,7 +1616,7 @@ msgstr ""
 msgid "MsChapV2"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:497
+#: view/qmodem/sms_conversation.js:502
 msgid "Multi-part"
 msgstr ""
 
@@ -1731,7 +1731,7 @@ msgstr ""
 msgid "No messages found"
 msgstr ""
 
-#: view/qmodem/sms_conversation.js:463
+#: view/qmodem/sms_conversation.js:468
 msgid "No messages in this conversation"
 msgstr ""
 
