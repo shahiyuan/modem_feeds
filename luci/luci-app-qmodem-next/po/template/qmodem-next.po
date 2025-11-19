@@ -58,7 +58,7 @@ msgstr ""
 
 #: vendor/fibocom.sh:432
 #: vendor/foxconn.sh:307
-#: vendor/huawei.sh:278
+#: vendor/huawei.sh:279
 #: vendor/meig.sh:238
 #: vendor/neoway.sh:161
 #: vendor/quectel.sh:363
@@ -76,8 +76,8 @@ msgstr ""
 #: vendor/fibocom.sh:1426
 #: vendor/fibocom.sh:1437
 #: vendor/fibocom.sh:1476
-#: vendor/huawei.sh:381
-#: vendor/huawei.sh:513
+#: vendor/huawei.sh:382
+#: vendor/huawei.sh:514
 #: vendor/neoway.sh:719
 #: vendor/neoway.sh:774
 #: vendor/quectel.sh:1668
@@ -219,11 +219,11 @@ msgstr ""
 #: vendor/fibocom.sh:1516
 #: vendor/foxconn.sh:582
 #: vendor/foxconn.sh:629
-#: vendor/huawei.sh:382
-#: vendor/huawei.sh:514
-#: vendor/huawei.sh:532
-#: vendor/huawei.sh:557
-#: vendor/huawei.sh:579
+#: vendor/huawei.sh:383
+#: vendor/huawei.sh:515
+#: vendor/huawei.sh:533
+#: vendor/huawei.sh:558
+#: vendor/huawei.sh:580
 #: vendor/meig.sh:569
 #: vendor/meig.sh:584
 #: vendor/meig.sh:596
@@ -300,11 +300,11 @@ msgstr ""
 #: vendor/fibocom.sh:1512
 #: vendor/foxconn.sh:578
 #: vendor/foxconn.sh:634
-#: vendor/huawei.sh:378
-#: vendor/huawei.sh:510
-#: vendor/huawei.sh:528
-#: vendor/huawei.sh:553
-#: vendor/huawei.sh:575
+#: vendor/huawei.sh:379
+#: vendor/huawei.sh:511
+#: vendor/huawei.sh:529
+#: vendor/huawei.sh:554
+#: vendor/huawei.sh:576
 #: vendor/meig.sh:566
 #: vendor/meig.sh:581
 #: vendor/meig.sh:608
@@ -347,8 +347,8 @@ msgstr ""
 #: vendor/fibocom.sh:1469
 #: vendor/fibocom.sh:1503
 #: vendor/foxconn.sh:591
-#: vendor/huawei.sh:535
-#: vendor/huawei.sh:566
+#: vendor/huawei.sh:536
+#: vendor/huawei.sh:567
 #: vendor/neoway.sh:741
 #: vendor/quectel.sh:1699
 #: vendor/quectel.sh:1731
@@ -413,7 +413,7 @@ msgid "Close"
 msgstr ""
 
 #: vendor/fibocom.sh:1524
-#: vendor/huawei.sh:587
+#: vendor/huawei.sh:588
 #: vendor/neoway.sh:766
 #: vendor/quectel.sh:1751
 msgid "Compression Mode"
@@ -536,7 +536,7 @@ msgstr ""
 msgid "Custom format using placeholders: {SENDER}, {CONTENT}, {TIME}"
 msgstr ""
 
-#: vendor/huawei.sh:405
+#: vendor/huawei.sh:406
 msgid "DL"
 msgstr ""
 
@@ -547,10 +547,10 @@ msgstr ""
 #: vendor/fibocom.sh:1495
 #: vendor/foxconn.sh:584
 #: vendor/foxconn.sh:630
-#: vendor/huawei.sh:383
-#: vendor/huawei.sh:515
-#: vendor/huawei.sh:534
-#: vendor/huawei.sh:559
+#: vendor/huawei.sh:384
+#: vendor/huawei.sh:516
+#: vendor/huawei.sh:535
+#: vendor/huawei.sh:560
 #: vendor/meig.sh:570
 #: vendor/meig.sh:586
 #: vendor/meig.sh:597
@@ -657,7 +657,7 @@ msgstr ""
 msgid "Disconnected"
 msgstr ""
 
-#: vendor/huawei.sh:388
+#: vendor/huawei.sh:389
 msgid "Discontinuous Reception"
 msgstr ""
 
@@ -684,10 +684,10 @@ msgstr ""
 #: vendor/fibocom.sh:1488
 #: vendor/foxconn.sh:577
 #: vendor/foxconn.sh:633
-#: vendor/huawei.sh:377
-#: vendor/huawei.sh:509
-#: vendor/huawei.sh:527
-#: vendor/huawei.sh:552
+#: vendor/huawei.sh:378
+#: vendor/huawei.sh:510
+#: vendor/huawei.sh:528
+#: vendor/huawei.sh:553
 #: vendor/meig.sh:565
 #: vendor/meig.sh:580
 #: vendor/meig.sh:607
@@ -709,8 +709,8 @@ msgstr ""
 #: vendor/fibocom.sh:1491
 #: vendor/foxconn.sh:580
 #: vendor/foxconn.sh:636
-#: vendor/huawei.sh:530
-#: vendor/huawei.sh:555
+#: vendor/huawei.sh:531
+#: vendor/huawei.sh:556
 #: vendor/neoway.sh:730
 #: vendor/quectel.sh:1687
 #: vendor/quectel.sh:1720
@@ -720,7 +720,7 @@ msgid "E-UTRA Absolute Radio Frequency Channel Number"
 msgstr ""
 
 #: vendor/fibocom.sh:1518
-#: vendor/huawei.sh:581
+#: vendor/huawei.sh:582
 #: vendor/meig.sh:627
 #: vendor/neoway.sh:760
 #: vendor/quectel.sh:1745
@@ -729,7 +729,7 @@ msgid "Ec/Io"
 msgstr ""
 
 #: vendor/fibocom.sh:1519
-#: vendor/huawei.sh:582
+#: vendor/huawei.sh:583
 #: vendor/quectel.sh:1746
 msgid "Ec/No"
 msgstr ""
@@ -780,7 +780,7 @@ msgstr ""
 msgid "Encoding"
 msgstr ""
 
-#: vendor/huawei.sh:387
+#: vendor/huawei.sh:388
 msgid "Energy per Chip over Noise"
 msgstr ""
 
@@ -1046,8 +1046,8 @@ msgstr ""
 #: vendor/fibocom.sh:1492
 #: vendor/foxconn.sh:581
 #: vendor/foxconn.sh:637
-#: vendor/huawei.sh:531
-#: vendor/huawei.sh:556
+#: vendor/huawei.sh:532
+#: vendor/huawei.sh:557
 #: vendor/quectel.sh:1688
 #: vendor/quectel.sh:1721
 #: vendor/simcom.sh:952
@@ -1193,7 +1193,7 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: vendor/huawei.sh:403
+#: vendor/huawei.sh:404
 msgid "Information"
 msgstr ""
 
@@ -1220,7 +1220,7 @@ msgstr ""
 #: vendor/foxconn.sh:274
 #: vendor/foxconn.sh:280
 #: vendor/foxconn.sh:288
-#: vendor/huawei.sh:258
+#: vendor/huawei.sh:259
 #: vendor/meig.sh:286
 #: vendor/meig.sh:292
 #: vendor/meig.sh:300
@@ -1243,7 +1243,7 @@ msgstr ""
 #: vendor/fibocom.sh:520
 #: vendor/foxconn.sh:275
 #: vendor/foxconn.sh:289
-#: vendor/huawei.sh:259
+#: vendor/huawei.sh:260
 #: vendor/meig.sh:287
 #: vendor/meig.sh:301
 #: vendor/neoway.sh:217
@@ -1283,7 +1283,7 @@ msgstr ""
 msgid "LED indicator for network connection status"
 msgstr ""
 
-#: vendor/huawei.sh:392
+#: vendor/huawei.sh:393
 msgid "LTE Band"
 msgstr ""
 
@@ -1291,15 +1291,15 @@ msgstr ""
 msgid "LTE Cells"
 msgstr ""
 
-#: vendor/huawei.sh:393
+#: vendor/huawei.sh:394
 msgid "LTE DL"
 msgstr ""
 
-#: vendor/huawei.sh:391
+#: vendor/huawei.sh:392
 msgid "LTE Information"
 msgstr ""
 
-#: vendor/huawei.sh:394
+#: vendor/huawei.sh:395
 msgid "LTE UL"
 msgstr ""
 
@@ -1363,7 +1363,7 @@ msgid "Loading..."
 msgstr ""
 
 #: vendor/fibocom.sh:1511
-#: vendor/huawei.sh:574
+#: vendor/huawei.sh:575
 #: vendor/meig.sh:622
 #: vendor/neoway.sh:751
 #: vendor/quectel.sh:1738
@@ -1428,7 +1428,7 @@ msgstr ""
 #: vendor/fibocom.sh:430
 #: vendor/foxconn.sh:305
 #: vendor/gosuncn.sh:132
-#: vendor/huawei.sh:276
+#: vendor/huawei.sh:277
 #: vendor/meig.sh:236
 #: vendor/neoway.sh:159
 #: vendor/quectel.sh:361
@@ -1486,11 +1486,11 @@ msgstr ""
 #: vendor/fibocom.sh:1509
 #: vendor/foxconn.sh:575
 #: vendor/foxconn.sh:631
-#: vendor/huawei.sh:375
-#: vendor/huawei.sh:507
-#: vendor/huawei.sh:525
-#: vendor/huawei.sh:550
-#: vendor/huawei.sh:572
+#: vendor/huawei.sh:376
+#: vendor/huawei.sh:508
+#: vendor/huawei.sh:526
+#: vendor/huawei.sh:551
+#: vendor/huawei.sh:573
 #: vendor/meig.sh:563
 #: vendor/meig.sh:578
 #: vendor/meig.sh:593
@@ -1520,11 +1520,11 @@ msgstr ""
 #: vendor/fibocom.sh:1510
 #: vendor/foxconn.sh:576
 #: vendor/foxconn.sh:632
-#: vendor/huawei.sh:376
-#: vendor/huawei.sh:508
-#: vendor/huawei.sh:526
-#: vendor/huawei.sh:551
-#: vendor/huawei.sh:573
+#: vendor/huawei.sh:377
+#: vendor/huawei.sh:509
+#: vendor/huawei.sh:527
+#: vendor/huawei.sh:552
+#: vendor/huawei.sh:574
 #: vendor/meig.sh:564
 #: vendor/meig.sh:579
 #: vendor/meig.sh:594
@@ -1628,13 +1628,13 @@ msgstr ""
 msgid "NR (5G) Cells"
 msgstr ""
 
-#: vendor/huawei.sh:404
+#: vendor/huawei.sh:405
 #: view/qmodem/config_advanced.js:760
 msgid "NR Band"
 msgstr ""
 
 #: vendor/fibocom.sh:429
-#: vendor/huawei.sh:275
+#: vendor/huawei.sh:276
 #: vendor/meig.sh:235
 #: vendor/neoway.sh:158
 #: vendor/quectel.sh:360
@@ -1663,8 +1663,8 @@ msgstr ""
 #: vendor/fibocom.sh:1417
 #: vendor/foxconn.sh:555
 #: vendor/foxconn.sh:628
-#: vendor/huawei.sh:373
-#: vendor/huawei.sh:504
+#: vendor/huawei.sh:374
+#: vendor/huawei.sh:505
 #: vendor/meig.sh:560
 #: vendor/neoway.sh:711
 #: vendor/quectel.sh:1659
@@ -1918,10 +1918,10 @@ msgstr ""
 #: vendor/fibocom.sh:1490
 #: vendor/foxconn.sh:579
 #: vendor/foxconn.sh:635
-#: vendor/huawei.sh:379
-#: vendor/huawei.sh:511
-#: vendor/huawei.sh:529
-#: vendor/huawei.sh:554
+#: vendor/huawei.sh:380
+#: vendor/huawei.sh:512
+#: vendor/huawei.sh:530
+#: vendor/huawei.sh:555
 #: vendor/meig.sh:567
 #: vendor/meig.sh:582
 #: vendor/meig.sh:595
@@ -1942,7 +1942,7 @@ msgid "Physical Cell ID"
 msgstr ""
 
 #: vendor/fibocom.sh:1520
-#: vendor/huawei.sh:583
+#: vendor/huawei.sh:584
 #: vendor/neoway.sh:763
 #: vendor/quectel.sh:1747
 msgid "Physical Channel"
@@ -1986,7 +1986,7 @@ msgid "Power cycles the modem completely. Takes longer but ensures a full restar
 msgstr ""
 
 #: vendor/fibocom.sh:1514
-#: vendor/huawei.sh:577
+#: vendor/huawei.sh:578
 #: vendor/meig.sh:624
 #: vendor/neoway.sh:754
 #: vendor/quectel.sh:1741
@@ -2064,8 +2064,8 @@ msgstr ""
 #: vendor/fibocom.sh:1468
 #: vendor/fibocom.sh:1502
 #: vendor/foxconn.sh:590
-#: vendor/huawei.sh:543
-#: vendor/huawei.sh:565
+#: vendor/huawei.sh:544
+#: vendor/huawei.sh:566
 #: vendor/quectel.sh:1698
 #: vendor/quectel.sh:1730
 #: vendor/simcom.sh:962
@@ -2099,8 +2099,8 @@ msgid "Receive Rate"
 msgstr ""
 
 #: vendor/fibocom.sh:1517
-#: vendor/huawei.sh:386
-#: vendor/huawei.sh:580
+#: vendor/huawei.sh:387
+#: vendor/huawei.sh:581
 #: vendor/meig.sh:626
 #: vendor/neoway.sh:759
 #: vendor/quectel.sh:1744
@@ -2112,11 +2112,11 @@ msgstr ""
 #: vendor/fibocom.sh:1467
 #: vendor/fibocom.sh:1501
 #: vendor/foxconn.sh:589
-#: vendor/huawei.sh:389
-#: vendor/huawei.sh:399
-#: vendor/huawei.sh:519
-#: vendor/huawei.sh:542
-#: vendor/huawei.sh:564
+#: vendor/huawei.sh:390
+#: vendor/huawei.sh:400
+#: vendor/huawei.sh:520
+#: vendor/huawei.sh:543
+#: vendor/huawei.sh:565
 #: vendor/quectel.sh:1675
 #: vendor/quectel.sh:1697
 #: vendor/quectel.sh:1729
@@ -2129,7 +2129,7 @@ msgstr ""
 #: vendor/fibocom.sh:1465
 #: vendor/fibocom.sh:1499
 #: vendor/foxconn.sh:587
-#: vendor/huawei.sh:562
+#: vendor/huawei.sh:563
 #: vendor/neoway.sh:738
 #: vendor/quectel.sh:1695
 #: vendor/quectel.sh:1727
@@ -2149,12 +2149,12 @@ msgstr ""
 #: vendor/fibocom.sh:1479
 #: vendor/fibocom.sh:1497
 #: vendor/foxconn.sh:640
-#: vendor/huawei.sh:396
-#: vendor/huawei.sh:407
-#: vendor/huawei.sh:411
-#: vendor/huawei.sh:516
-#: vendor/huawei.sh:539
-#: vendor/huawei.sh:545
+#: vendor/huawei.sh:397
+#: vendor/huawei.sh:408
+#: vendor/huawei.sh:412
+#: vendor/huawei.sh:517
+#: vendor/huawei.sh:540
+#: vendor/huawei.sh:546
 #: vendor/meig.sh:571
 #: vendor/meig.sh:587
 #: vendor/meig.sh:598
@@ -2178,13 +2178,13 @@ msgstr ""
 #: vendor/fibocom.sh:1498
 #: vendor/foxconn.sh:586
 #: vendor/foxconn.sh:639
-#: vendor/huawei.sh:397
-#: vendor/huawei.sh:408
-#: vendor/huawei.sh:412
-#: vendor/huawei.sh:517
-#: vendor/huawei.sh:540
-#: vendor/huawei.sh:546
-#: vendor/huawei.sh:561
+#: vendor/huawei.sh:398
+#: vendor/huawei.sh:409
+#: vendor/huawei.sh:413
+#: vendor/huawei.sh:518
+#: vendor/huawei.sh:541
+#: vendor/huawei.sh:547
+#: vendor/huawei.sh:562
 #: vendor/meig.sh:572
 #: vendor/meig.sh:588
 #: vendor/meig.sh:599
@@ -2222,7 +2222,7 @@ msgstr ""
 #: vendor/fibocom.sh:431
 #: vendor/foxconn.sh:306
 #: vendor/gosuncn.sh:134
-#: vendor/huawei.sh:277
+#: vendor/huawei.sh:278
 #: vendor/meig.sh:237
 #: vendor/neoway.sh:160
 #: vendor/quectel.sh:362
@@ -2238,7 +2238,7 @@ msgid "Rostelecom (RU)"
 msgstr ""
 
 #: vendor/fibocom.sh:1515
-#: vendor/huawei.sh:578
+#: vendor/huawei.sh:579
 #: vendor/neoway.sh:755
 #: vendor/quectel.sh:1742
 msgid "Routing Area Code"
@@ -2250,14 +2250,14 @@ msgid "Running"
 msgstr ""
 
 #: vendor/fibocom.sh:1525
-#: vendor/huawei.sh:588
+#: vendor/huawei.sh:589
 #: vendor/quectel.sh:1752
 msgid "RxLev"
 msgstr ""
 
 #: vendor/fibocom.sh:1447
 #: vendor/fibocom.sh:1482
-#: vendor/huawei.sh:520
+#: vendor/huawei.sh:521
 #: vendor/meig.sh:574
 #: vendor/meig.sh:601
 #: vendor/quectel.sh:1676
@@ -2278,7 +2278,7 @@ msgstr ""
 
 #: vendor/fibocom.sh:504
 #: vendor/foxconn.sh:273
-#: vendor/huawei.sh:257
+#: vendor/huawei.sh:258
 #: vendor/meig.sh:285
 #: vendor/neoway.sh:215
 #: vendor/quectel.sh:423
@@ -2291,7 +2291,7 @@ msgstr ""
 #: vendor/foxconn.sh:272
 #: vendor/foxconn.sh:287
 #: vendor/gosuncn.sh:124
-#: vendor/huawei.sh:256
+#: vendor/huawei.sh:257
 #: vendor/meig.sh:284
 #: vendor/meig.sh:299
 #: vendor/neoway.sh:214
@@ -2315,7 +2315,7 @@ msgstr ""
 #: vendor/foxconn.sh:283
 #: vendor/foxconn.sh:286
 #: vendor/gosuncn.sh:123
-#: vendor/huawei.sh:255
+#: vendor/huawei.sh:256
 #: vendor/meig.sh:282
 #: vendor/meig.sh:291
 #: vendor/meig.sh:295
@@ -2491,9 +2491,9 @@ msgstr ""
 #: vendor/fibocom.sh:1471
 #: vendor/fibocom.sh:1505
 #: vendor/foxconn.sh:593
-#: vendor/huawei.sh:521
-#: vendor/huawei.sh:537
-#: vendor/huawei.sh:568
+#: vendor/huawei.sh:522
+#: vendor/huawei.sh:538
+#: vendor/huawei.sh:569
 #: vendor/neoway.sh:744
 #: vendor/quectel.sh:1677
 #: vendor/quectel.sh:1701
@@ -2527,13 +2527,13 @@ msgstr ""
 #: vendor/fibocom.sh:1500
 #: vendor/foxconn.sh:588
 #: vendor/foxconn.sh:641
-#: vendor/huawei.sh:398
-#: vendor/huawei.sh:409
-#: vendor/huawei.sh:413
-#: vendor/huawei.sh:518
-#: vendor/huawei.sh:541
-#: vendor/huawei.sh:547
-#: vendor/huawei.sh:563
+#: vendor/huawei.sh:399
+#: vendor/huawei.sh:410
+#: vendor/huawei.sh:414
+#: vendor/huawei.sh:519
+#: vendor/huawei.sh:542
+#: vendor/huawei.sh:548
+#: vendor/huawei.sh:564
 #: vendor/quectel.sh:1674
 #: vendor/quectel.sh:1696
 #: vendor/quectel.sh:1711
@@ -2552,7 +2552,7 @@ msgid "Skytone (CN)"
 msgstr ""
 
 #: vendor/fibocom.sh:1522
-#: vendor/huawei.sh:585
+#: vendor/huawei.sh:586
 #: vendor/neoway.sh:765
 #: vendor/quectel.sh:1749
 msgid "Slot"
@@ -2585,13 +2585,13 @@ msgid "Soft reboot initiated successfully. The modem is restarting..."
 msgstr ""
 
 #: vendor/fibocom.sh:1523
-#: vendor/huawei.sh:586
+#: vendor/huawei.sh:587
 #: vendor/quectel.sh:1750
 msgid "Speech Code"
 msgstr ""
 
 #: vendor/fibocom.sh:1521
-#: vendor/huawei.sh:584
+#: vendor/huawei.sh:585
 #: vendor/neoway.sh:764
 #: vendor/quectel.sh:1748
 msgid "Spreading Factor"
@@ -2634,8 +2634,8 @@ msgstr ""
 #: vendor/fibocom.sh:1504
 #: vendor/foxconn.sh:592
 #: vendor/foxconn.sh:642
-#: vendor/huawei.sh:536
-#: vendor/huawei.sh:567
+#: vendor/huawei.sh:537
+#: vendor/huawei.sh:568
 #: vendor/meig.sh:590
 #: vendor/meig.sh:617
 #: vendor/quectel.sh:1700
@@ -2712,10 +2712,10 @@ msgstr ""
 #: vendor/fibocom.sh:1496
 #: vendor/foxconn.sh:585
 #: vendor/foxconn.sh:638
-#: vendor/huawei.sh:380
-#: vendor/huawei.sh:512
-#: vendor/huawei.sh:538
-#: vendor/huawei.sh:560
+#: vendor/huawei.sh:381
+#: vendor/huawei.sh:513
+#: vendor/huawei.sh:539
+#: vendor/huawei.sh:561
 #: vendor/quectel.sh:1667
 #: vendor/quectel.sh:1692
 #: vendor/quectel.sh:1725
@@ -2745,7 +2745,7 @@ msgstr ""
 msgid "Tx Power"
 msgstr ""
 
-#: vendor/huawei.sh:406
+#: vendor/huawei.sh:407
 msgid "UL"
 msgstr ""
 
@@ -2755,8 +2755,8 @@ msgstr ""
 #: vendor/fibocom.sh:1460
 #: vendor/fibocom.sh:1494
 #: vendor/foxconn.sh:583
-#: vendor/huawei.sh:533
-#: vendor/huawei.sh:558
+#: vendor/huawei.sh:534
+#: vendor/huawei.sh:559
 #: vendor/meig.sh:585
 #: vendor/meig.sh:612
 #: vendor/neoway.sh:743
@@ -2794,7 +2794,7 @@ msgid "USB scan failed"
 msgstr ""
 
 #: vendor/fibocom.sh:1513
-#: vendor/huawei.sh:576
+#: vendor/huawei.sh:577
 #: vendor/neoway.sh:753
 #: vendor/quectel.sh:1740
 msgid "UTRA Absolute Radio Frequency Channel Number"
@@ -2856,7 +2856,7 @@ msgstr ""
 msgid "Voltage"
 msgstr ""
 
-#: vendor/huawei.sh:385
+#: vendor/huawei.sh:386
 msgid "WCDMA Information"
 msgstr ""
 
