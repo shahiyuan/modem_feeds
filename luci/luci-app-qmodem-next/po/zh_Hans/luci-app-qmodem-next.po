@@ -308,7 +308,7 @@ msgstr "默认别名"
 
 # Source: view/qmodem/settings.js:207
 msgid "Default Metric"
-msgstr "默认度量"
+msgstr "默认跃点数"
 
 # Source: view/qmodem/settings.js:51
 msgid "Delay Start"
@@ -1528,7 +1528,7 @@ msgstr "温度"
 
 # Source: view/qmodem/settings.js:208
 msgid "The first module loaded into this slot will automatically be assigned this default metric."
-msgstr "首次加载到此插槽的模块将自动分配此默认度量。"
+msgstr "首次加载到此插槽的模块将自动分配此默认跃点数。"
 
 # Source: qmodem/sms.js:222
 msgid "Thursday"
@@ -1856,7 +1856,7 @@ msgstr "Megafon (RU)"
 
 # Source: view/qmodem/network_config.js:467
 msgid "Metric"
-msgstr "度量值"
+msgstr "跃点数"
 
 # Source: view/status/include/11_modem.js:19
 msgid "Modem Info"
@@ -1964,7 +1964,7 @@ msgstr "Telekom (DE)"
 
 # Source: view/qmodem/network_config.js:468
 msgid "The metric value is used to determine the priority of the route. The smaller the value, the higher the priority. Cannot duplicate."
-msgstr "度量值用于确定路由优先级，数值越小优先级越高，不可重复。"
+msgstr "跃点数用于确定路由优先级，数值越小优先级越高，不可重复。"
 
 # Source: view/qmodem/network_config.js:378, view/qmodem/network_config.js:455
 msgid "UMobile (MY)"
@@ -2163,3 +2163,167 @@ msgstr "API配置已保存。记得保存并应用更改。"
 
 msgid "SMS Forwarder"
 msgstr "短信转发"
+
+# Source: vendor/sierra.sh:437, vendor/sierra.sh:440, vendor/sierra.sh:443, vendor/sierra.sh:446
+msgid "$key"
+msgstr "$key"
+
+# Source: view/qmodem/network_config.js:364, view/qmodem/network_config.js:441
+msgid "A1 (AT)"
+msgstr "A1 (AT)"
+
+# Source: view/qmodem/network_config.js:346, view/qmodem/network_config.js:422
+msgid "APN"
+msgstr "APN"
+
+# Source: view/qmodem/config_advanced.js:737
+msgid "ARFCN"
+msgstr "ARFCN"
+
+# Source: view/qmodem/network_config.js:381, view/qmodem/network_config.js:458
+msgid "Beeline (RU)"
+msgstr "Beeline (RU)"
+
+# Source: view/qmodem/network_config.js:373, view/qmodem/network_config.js:450
+msgid "Celcom (MY)"
+msgstr "Celcom (MY)"
+
+# Source: view/qmodem/network_config.js:293
+msgid "DNS"
+msgstr "DNS"
+
+# Source: view/qmodem/network_config.js:374, view/qmodem/network_config.js:451
+msgid "DiGi (MY)"
+msgstr "DiGi (MY)"
+
+# Source: view/qmodem/network_config.js:365, view/qmodem/network_config.js:442
+msgid "Drei (AT)"
+msgstr "Drei (AT)"
+
+# Source: view/qmodem/network_config.js:362, view/qmodem/network_config.js:439
+msgid "E-Plus (DE)"
+msgstr "E-Plus (DE)"
+
+# Source: vendor/fibocom.sh:1518, vendor/huawei.sh:581, vendor/meig.sh:627, vendor/neoway.sh:760, vendor/quectel.sh:1745, vendor/simcom.sh:1005
+msgid "Ec/Io"
+msgstr "Ec/Io"
+
+# Source: vendor/fibocom.sh:1519, vendor/huawei.sh:582, vendor/quectel.sh:1746
+msgid "Ec/No"
+msgstr "Ec/No"
+
+# Source: view/qmodem/settings.js:326
+msgid "GPIO Value(Modem Power Down)"
+msgstr "GPIO值（调制解调器断电）"
+
+# Source: view/qmodem/settings.js:331
+msgid "GPIO Value(Modem Power Up)"
+msgstr "GPIO值（调制解调器通电）"
+
+# Source: view/qmodem/network_config.js:339
+msgid "IPv4"
+msgstr "IPv4"
+
+# Source: view/qmodem/network_config.js:341
+msgid "IPv4/IPv6"
+msgstr "IPv4/IPv6"
+
+# Source: view/qmodem/network_config.js:340
+msgid "IPv6"
+msgstr "IPv6"
+
+# Source: view/qmodem/network_config.js:382, view/qmodem/network_config.js:459
+msgid "MTS (RU)"
+msgstr "MTS (RU)"
+
+# Source: view/qmodem/network_config.js:366, view/qmodem/network_config.js:443
+msgid "Magenta (AT)"
+msgstr "Magenta (AT)"
+
+# Source: view/qmodem/network_config.js:376, view/qmodem/network_config.js:453
+msgid "Maxis UT (MY)"
+msgstr "Maxis UT (MY)"
+
+# Source: view/qmodem/network_config.js:375, view/qmodem/network_config.js:452
+msgid "Maxis | Hotlink (MY)"
+msgstr "Maxis | Hotlink (MY)"
+
+# Source: view/qmodem/network_config.js:383, view/qmodem/network_config.js:460
+msgid "Megafon (RU)"
+msgstr "Megafon (RU)"
+
+# Source: view/qmodem/config_advanced.js:723
+msgid "PCI"
+msgstr "PCI"
+
+# Source: view/qmodem/settings.js:248
+msgid "PCIe"
+msgstr "PCIe"
+
+# Source: view/qmodem/sms_forward.js:66
+msgid "PushDeer"
+msgstr "PushDeer"
+
+# Source: view/qmodem/network_config.js:387, view/qmodem/network_config.js:464
+msgid "Rostelecom (RU)"
+msgstr "Rostelecom (RU)"
+
+# Source: view/qmodem/network_config.js:388, view/qmodem/network_config.js:465
+msgid "Sber Mobile (RU)"
+msgstr "Sber Mobile (RU)"
+
+# Source: view/qmodem/network_config.js:355, view/qmodem/network_config.js:432
+msgid "Skytone (CN)"
+msgstr "Skytone (CN)"
+
+# Source: view/qmodem/network_config.js:370, view/qmodem/network_config.js:447
+msgid "Smart Communications (PH)"
+msgstr "Smart Communications (PH)"
+
+# Source: view/qmodem/network_config.js:357, view/qmodem/network_config.js:434
+msgid "Swisscom (CH)"
+msgstr "Swisscom (CH)"
+
+# Source: view/qmodem/network_config.js:386, view/qmodem/network_config.js:463
+msgid "T-mobile (RU)"
+msgstr "T-mobile (RU)"
+
+# Source: view/qmodem/network_config.js:384, view/qmodem/network_config.js:461
+msgid "Tele2 (RU)"
+msgstr "Tele2 (RU)"
+
+# Source: view/qmodem/network_config.js:361, view/qmodem/network_config.js:438
+msgid "Telekom (DE)"
+msgstr "Telekom (DE)"
+
+# Source: view/qmodem/network_config.js:378, view/qmodem/network_config.js:455
+msgid "UMobile (MY)"
+msgstr "UMobile (MY)"
+
+# Source: view/qmodem/settings.js:247
+msgid "USB"
+msgstr "USB"
+
+# Source: view/qmodem/network_config.js:379, view/qmodem/network_config.js:456
+msgid "Unifi (MY)"
+msgstr "Unifi (MY)"
+
+# Source: view/qmodem/network_config.js:360, view/qmodem/network_config.js:437
+msgid "Vodafone (DE)"
+msgstr "Vodafone (DE)"
+
+# Source: view/qmodem/sms_forward.js:64
+msgid "Webhook"
+msgstr "Webhook"
+
+# Source: view/qmodem/sms_forward.js:129, view/qmodem/sms_forward.js:267
+msgid "Webhook URL"
+msgstr "Webhook URL"
+
+# Source: view/qmodem/network_config.js:377, view/qmodem/network_config.js:454
+msgid "YES (MY)"
+msgstr "YES (MY)"
+
+# Source: view/qmodem/network_config.js:385, view/qmodem/network_config.js:462
+msgid "Yota (RU)"
+msgstr "Yota (RU)"
