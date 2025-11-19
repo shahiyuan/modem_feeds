@@ -456,17 +456,8 @@ EOF
                 ;;
                 
             do_reboot)
-                read -r input
                 params=$(echo "$input" | jsonfilter -e '@.params')
                 reboot_method=$(echo "$params" | jq -r '.method')
-                
-                # Source helper functions and get configuration
-                . /usr/share/qmodem/modem_util.sh
-                get_modem_config "$config_section"
-                
-                # Load vendor-specific script
-                load_vendor_script "$vendor"
-                
                 
                 case "$reboot_method" in
                     "hard")
@@ -480,6 +471,7 @@ EOF
                 json_init
                 json_add_object result
                 json_add_string status "1"
+                json_add_string method "$reboot_method"
                 json_close_object
                 json_dump
                 ;;
