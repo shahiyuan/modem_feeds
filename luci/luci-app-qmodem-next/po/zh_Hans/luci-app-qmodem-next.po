@@ -2237,3 +2237,63 @@ msgstr "令牌"
 # Source: view/qmodem/sms_forward.js:32
 msgid "Warning"
 msgstr "警告"
+
+# Source: view/qmodem/settings.js:249
+msgid "Add"
+msgstr "添加"
+
+# Source: view/qmodem/settings.js:219
+msgid "Add Modem Device"
+msgstr "添加模组设备"
+
+# Source: view/qmodem/settings.js:222
+msgid "Available Devices"
+msgstr "可用设备"
+
+# Source: view/qmodem/settings.js:328
+msgid "Disabled Features"
+msgstr "已禁用功能"
+
+# Source: view/qmodem/settings.js:346
+msgid "NSA Band"
+msgstr "NSA频段"
+
+# Source: view/qmodem/settings.js:211
+msgid "No devices available. Please scan for devices first."
+msgstr "无可用设备，请先扫描设备。"
+
+# Source: view/qmodem/settings.js:313
+msgid "Platform"
+msgstr "平台"
+
+# Source: view/qmodem/settings.js:351
+msgid "SA Band"
+msgstr "SA频段"
+
+# Source: view/qmodem/settings.js:220
+msgid "Select a device to configure:"
+msgstr "请选择要配置的设备："
+
+# Source: view/qmodem/settings.js:329
+msgid "Select features to disable for this modem."
+msgstr "请选择要为此模组禁用的功能。"
+
+# Source: view/qmodem/settings.js:320
+msgid "Supported Modes"
+msgstr "支持的模式"
+
+# Source: view/qmodem/settings.js:321
+msgid "Supported driver modes (e.g., RNDIS/NCM/QMI/MBIM/ETH/PPP)"
+msgstr "支持的驱动模式（例如：RNDIS/NCM/QMI/MBIM/ETH/PPP）"
+
+# Source: view/qmodem/settings.js:259
+msgid "Type"
+msgstr "类型"
+
+# Source: view/qmodem/settings.js:306
+msgid "Vendor"
+msgstr "厂商"
+
+# Source: view/qmodem/settings.js:336
+msgid "WCDMA Band"
+msgstr "WCDMA频段"
