@@ -430,7 +430,6 @@ return L.Class.extend({
 					enabled: s.enabled !== '0'
 				});
 			});
-            console.log(sections);
 			return sections;
 		});
 	},
