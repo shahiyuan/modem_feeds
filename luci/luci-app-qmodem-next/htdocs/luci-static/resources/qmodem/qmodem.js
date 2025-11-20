@@ -108,6 +108,13 @@ var callGetRebootCaps = rpc.declare({
 	expect: { }
 });
 
+var callGetCopyright = rpc.declare({
+	object: 'qmodem',
+	method: 'get_copyright',
+	params: ['config_section'],
+	expect: { }
+});
+
 var callSendAt = rpc.declare({
 	object: 'qmodem',
 	method: 'send_at',
@@ -301,6 +308,11 @@ return L.Class.extend({
 	// Get reboot capabilities
 	getRebootCaps: function(section) {
 		return callGetRebootCaps(section);
+	},
+
+	// Get copyright information
+	getCopyright: function(section) {
+		return callGetCopyright(section);
 	},
 
 	// Send AT command
