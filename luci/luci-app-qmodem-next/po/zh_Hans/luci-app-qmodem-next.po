@@ -2297,3 +2297,19 @@ msgstr "厂商"
 # Source: view/qmodem/settings.js:336
 msgid "WCDMA Band"
 msgstr "WCDMA频段"
+
+# Source: view/qmodem/config_advanced.js:805
+msgid "Cell unlocked successfully"
+msgstr "小区解锁成功"
+
+# Source: view/qmodem/config_advanced.js:810
+msgid "Failed to unlock cell"
+msgstr "解锁小区失败"
+
+# Source: view/qmodem/config_advanced.js:813, view/qmodem/config_advanced.js:817, view/qmodem/config_advanced.js:820
+msgid "Unlock Cell"
+msgstr "解锁小区"
+
+# Source: view/qmodem/config_advanced.js:795
+msgid "Unlocking..."
+msgstr "解锁中..."
