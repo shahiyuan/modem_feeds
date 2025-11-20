@@ -1191,7 +1191,7 @@ return view.extend({
 						'name': 'band_' + modem.id + '_' + bandClass,
 						'value': band.band_id,
 						'id': 'band_' + modem.id + '_' + bandClass + '_' + band.band_id,
-						'checked': lockbandState[bandClass].locked.includes(band.band_id.toString()),
+						'checked': lockbandState[bandClass].locked.includes(band.band_id.toString()) ? 'checked' : null,
 						'change': function() {
 							if (this.checked) {
 								if (!lockbandState[bandClass].locked.includes(band.band_id.toString())) {
