@@ -925,7 +925,7 @@ msgstr ""
 msgid "Error loading mode: %s"
 msgstr ""
 
-#: view/qmodem/overview.js:314
+#: view/qmodem/overview.js:466
 msgid "Error loading modem information: %s"
 msgstr ""
 
@@ -1402,8 +1402,8 @@ msgstr ""
 msgid "Last Message"
 msgstr ""
 
-#: view/qmodem/overview.js:309
-#: view/qmodem/overview.js:360
+#: view/qmodem/overview.js:461
+#: view/qmodem/overview.js:519
 msgid "Last update"
 msgstr ""
 
@@ -1428,7 +1428,7 @@ msgstr ""
 msgid "Loading messages..."
 msgstr ""
 
-#: view/qmodem/overview.js:241
+#: view/qmodem/overview.js:350
 msgid "Loading modem information..."
 msgstr ""
 
@@ -1681,7 +1681,7 @@ msgstr ""
 
 #: view/qmodem/config_advanced.js:27
 #: view/qmodem/debug.js:27
-#: view/qmodem/overview.js:334
+#: view/qmodem/overview.js:486
 #: view/qmodem/sms.js:65
 #: view/qmodem/sms_conversation.js:83
 msgid "Modem Name"
@@ -1860,7 +1860,7 @@ msgstr ""
 msgid "No modem information available"
 msgstr ""
 
-#: view/qmodem/overview.js:324
+#: view/qmodem/overview.js:476
 #: view/qmodem/sms.js:56
 #: view/qmodem/sms_conversation.js:73
 msgid "No modems configured or all modems are disabled."
