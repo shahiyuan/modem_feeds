@@ -753,9 +753,6 @@ qmi_dial()
 
 at_dial()
 {
-    if [ -z "$apn" ];then
-        apn="auto"
-    fi
     if [ -z "$pdp_type" ];then
         pdp_type="IP"
     fi
