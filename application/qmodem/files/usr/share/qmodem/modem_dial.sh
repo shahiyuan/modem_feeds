@@ -149,6 +149,7 @@ update_config()
     config_get do_not_add_dns $modem_config do_not_add_dns
     config_get dns_list $modem_config dns_list
     config_get huawei_dial_mode $modem_config huawei_dial_mode
+    config_get donot_nat $modem_config donot_nat 0
     config_get global_dial main enable_dial
     # config_get ethernet_5g u$modem_config ethernet 转往口获取命令更新，待测试
     config_foreach get_associate_ethernet_by_path modem-slot
@@ -756,19 +757,26 @@ at_dial()
     if [ -z "$pdp_type" ];then
         pdp_type="IP"
     fi
+    [ -n "$apn" ] && apn_append=",\"$apn\"" || apn_append=""
     local at_command='AT+COPS=0,0'
     tmp=$(at "${at_port}" "${at_command}")
     pdp_type=$(echo $pdp_type | tr 'a-z' 'A-Z')
     case $manufacturer in
         "quectel")
+            [ "$donot_nat" = "1" ] && nat_cfg="AT+QCFG=\"nat\",0" || nat_cfg="AT+QCFG=\"nat\",1"
             case $platform in
                 "hisilicon")
                     at_command="AT+QNETDEVCTL=1,1,1"
                     cgdcont_command=""
                     ;;
+
+                "unisoc")
+                    at_command="AT+QNETDEVCTL=1,$pdp_index,1" # +QNETDEVCTL: <cid>,<op>,<state> 
+                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\""$apn_append
+                    ;;
                 *)
-                    at_command="AT+QNETDEVCTL=$pdp_index,3,1"
-                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\",\"$apn\""
+                    at_command="AT+QNETDEVCTL=3,$pdp_index,1" #LTE Standard AT+QNETDEVCTL=<connect_type>[,<CID>[,<URC_switch>]] 
+                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\""$apn_append
                     ;;
             esac
             ;;
@@ -776,13 +784,13 @@ at_dial()
             case $platform in
                 "mediatek")
                     delay=3
-                    [ "$apn" = "auto" ] && apn="cbnet"
+                    [ "$apn" = "auto" ] || [ -z "$apn" ] && apn="cbnet"
                     at_command="AT+CGACT=1,$pdp_index"
                     cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\",\"$apn\""
                     ;;
                 "lte")
                     at_command="AT+GTRNDIS=1,$pdp_index"
-                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\",\"$apn\""
+                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\""$apn_append
                     if [ -n "$auth" ]; then
                         case $auth in
                             "pap") 
@@ -801,7 +809,7 @@ at_dial()
                     ;;
                 "unisoc")
                     at_command="AT+GTRNDIS=1,$pdp_index"
-                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\",\"$apn\""
+                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\""$apn_append
                     if [ -n "$auth" ]; then
                         case $auth in
                             "pap") 
@@ -823,7 +831,24 @@ at_dial()
             case $platform in
                 "hisilicon")
                     at_command="AT^NDISDUP=1,$pdp_index"
-                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\""
+                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\""$apn_append
+                    if [ -n "$auth" ]; then
+                        case $auth in
+                            "pap") 
+                                auth_num=1 ;;
+                            "chap") 
+                                auth_num=2 ;;
+                            "auto"|"both"|"MsChapV2") 
+                                auth_num=3 ;;
+                            *) 
+                                auth_num=0 ;;
+                        esac
+                        if [ -n "$username" ] || [ -n "$password" ] && [ "$auth_num" != "0" ] ; then
+                            plmn=$(at ${at_port} "AT+COPS=3,2;+COPS?" | grep "+COPS:" | sed 's/+COPS: //g' | cut -d',' -f3 | sed 's/\"//g' | cut -c1-5 | grep -o  -o '[0-9]\{5\}')
+                            [ -z "$plmn" ] && plmn="00000"
+                            ppp_auth_command="AT^AUTHDATA=$pdp_index,$auth_num,$plmn,\"$username\",\"$password\""
+                        fi
+                    fi
                     ;;
             esac
             ;;
@@ -832,7 +857,7 @@ at_dial()
                 "qualcomm")
                     local cnmp=$(at ${at_port} "AT+CNMP?" | grep "+CNMP:" | sed 's/+CNMP: //g' | sed 's/\r//g')
                     at_command="AT+CNMP=$cnmp;+CNWINFO=1"
-                    cgdcont_command="AT+CGDCONT=1,\"$pdp_type\",\"$apn\""
+                    cgdcont_command="AT+CGDCONT=1,\"$pdp_type\""$apn_append
                     ;;
             esac
             ;;
@@ -840,7 +865,7 @@ at_dial()
             case $platform in
                 "qualcomm")
                     at_command='AT$QCRMCALL=1,0,3,2,'$pdp_index
-                    cgdcont_command="AT+CGDCONT=1,\"$pdp_type\",\"$apn\""
+                    cgdcont_command="AT+CGDCONT=1,\"$pdp_type\""$apn_append
                     ;;
             esac
             ;;
@@ -848,7 +873,7 @@ at_dial()
             case $platform in
                 "unisoc")
                     at_command='AT$MYUSBNETACT=0,1'
-                    cgdcont_command="AT+CGDCONT=1,\"$pdp_type\",\"$apn\""
+                    cgdcont_command="AT+CGDCONT=1,\"$pdp_type\""$apn_append
                     ;;
             esac
             ;;
@@ -856,7 +881,7 @@ at_dial()
             case $platform in
                 "qualcomm")
                     at_command="AT#ICMAUTOCONN=1,$pdp_index"
-                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\",\"$apn\""
+                    cgdcont_command="AT+CGDCONT=$pdp_index,\"$pdp_type\""$apn_append
                     ;;
             esac
             ;;
@@ -866,6 +891,7 @@ at_dial()
 	case $driver in
         "mtk_pcie")
             mbim_port=$(echo "$at_port" | sed 's/at/mbim/g')
+            [ -n "$apn" ] || apn="auto"
         	rf_status=$(umbim -d  $mbim_port radio|sed -n 's/.*swradiostate: *//p')
         	[ "$rf_status" = "off" ] && umbim -d  $mbim_port radio on
         	umbim -d $mbim_port disconnect
@@ -875,6 +901,7 @@ at_dial()
 		*)
   			at "${at_port}" "${cgdcont_command}"
             [ -n "$ppp_auth_command" ] && at "${at_port}" "$ppp_auth_command"
+            [ -n "$nat_cfg" ] && at "${at_port}" "$nat_cfg"
         	at "$at_port" "$at_command"
 		 	;;
 	esac
