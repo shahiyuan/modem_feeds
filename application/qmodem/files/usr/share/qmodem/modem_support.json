@@ -132,7 +132,7 @@
                     "ncm"
                 ]
             },
-            "mt5710m_cn": {
+            "mt5710_cn": {
                 "manufacturer_id": "3466",
                 "manufacturer": "huawei",
                 "platform": "hisilicon",
