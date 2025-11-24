@@ -298,7 +298,7 @@ scan_usb_slot_interfaces()
 validate_at_port()
 {
     valid_at_ports=""
-    for at_port in "$at_ports"; do
+    for at_port in $at_ports; do
         dev_path="/dev/$at_port"
         [ ! -e "$dev_path" ] && continue
         #disable at-daemon binding
