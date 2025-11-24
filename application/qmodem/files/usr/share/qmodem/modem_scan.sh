@@ -544,6 +544,7 @@ case $action in
         ;;
     "remove")
         debug_subject="modem_scan_remove"
+        [ -z "$config" ] && exit 1
         remove $config
         ;;
     "disable")
