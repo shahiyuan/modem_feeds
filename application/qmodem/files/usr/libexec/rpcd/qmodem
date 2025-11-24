@@ -349,7 +349,7 @@ EOF
                         json_init
                         log_file="/var/run/qmodem/${config_section}_dir/dial_log"
                         if [ -f "$log_file" ]; then
-                            log_content=$(cat "$log_file")
+                            log_content=$(cat "$log_file" | tail -n 100)
                             json_add_string log "$log_content"
                         else
                             json_add_string log ""
