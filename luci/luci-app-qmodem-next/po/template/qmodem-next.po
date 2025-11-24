@@ -196,7 +196,7 @@ msgstr ""
 msgid "Are you sure you want to change the IMEI to %s? This requires modem reboot."
 msgstr ""
 
-#: view/qmodem/network_config.js:982
+#: view/qmodem/network_config.js:980
 msgid "Are you sure you want to clear the dial log?"
 msgstr ""
 
@@ -324,7 +324,7 @@ msgstr ""
 msgid "Bridge Mode"
 msgstr ""
 
-#: view/qmodem/network_config.js:987
+#: view/qmodem/network_config.js:985
 #: view/qmodem/settings.js:239
 #: view/qmodem/sms.js:474
 #: view/qmodem/sms_forward.js:303
@@ -453,12 +453,12 @@ msgstr ""
 msgid "China Unicom (CN)"
 msgstr ""
 
-#: view/qmodem/network_config.js:909
+#: view/qmodem/network_config.js:907
 #: view/qmodem/sms_conversation.js:315
 msgid "Clear"
 msgstr ""
 
-#: view/qmodem/network_config.js:981
+#: view/qmodem/network_config.js:979
 msgid "Clear Dial Log"
 msgstr ""
 
@@ -466,11 +466,11 @@ msgstr ""
 msgid "Click \"Scan Neighbor Cells\" to search for nearby cell towers"
 msgstr ""
 
-#: view/qmodem/debug.js:177
+#: view/qmodem/debug.js:179
 msgid "Click \"Send AT Command\" to execute"
 msgstr ""
 
-#: view/qmodem/network_config.js:914
+#: view/qmodem/network_config.js:912
 msgid "Close"
 msgstr ""
 
@@ -533,7 +533,7 @@ msgstr ""
 msgid "Configured Ports"
 msgstr ""
 
-#: view/qmodem/network_config.js:1009
+#: view/qmodem/network_config.js:1007
 msgid "Confirm"
 msgstr ""
 
@@ -746,7 +746,7 @@ msgstr ""
 msgid "Do Not modify resolv.conf"
 msgstr ""
 
-#: view/qmodem/network_config.js:902
+#: view/qmodem/network_config.js:900
 msgid "Download"
 msgstr ""
 
@@ -883,7 +883,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: view/qmodem/debug.js:239
+#: view/qmodem/debug.js:241
 msgid "Error loading AT configuration: %s"
 msgstr ""
 
@@ -948,8 +948,8 @@ msgstr ""
 #: view/qmodem/network_config.js:608
 #: view/qmodem/network_config.js:691
 #: view/qmodem/network_config.js:861
-#: view/qmodem/network_config.js:948
-#: view/qmodem/network_config.js:1005
+#: view/qmodem/network_config.js:946
+#: view/qmodem/network_config.js:1003
 msgid "Error: "
 msgstr ""
 
@@ -961,11 +961,11 @@ msgstr ""
 #: view/qmodem/config_advanced.js:1317
 #: view/qmodem/config_advanced.js:1443
 #: view/qmodem/config_advanced.js:1480
-#: view/qmodem/debug.js:205
+#: view/qmodem/debug.js:207
 msgid "Error: %s"
 msgstr ""
 
-#: view/qmodem/debug.js:187
+#: view/qmodem/debug.js:189
 msgid "Error: Please enter AT command"
 msgstr ""
 
@@ -985,7 +985,7 @@ msgstr ""
 msgid "Failed to apply lock cell configuration"
 msgstr ""
 
-#: view/qmodem/network_config.js:1001
+#: view/qmodem/network_config.js:999
 msgid "Failed to clear log"
 msgstr ""
 
@@ -999,7 +999,7 @@ msgstr ""
 msgid "Failed to disable QModem Network: "
 msgstr ""
 
-#: view/qmodem/network_config.js:976
+#: view/qmodem/network_config.js:974
 msgid "Failed to download log: "
 msgstr ""
 
@@ -1028,7 +1028,7 @@ msgstr ""
 msgid "Failed to load available modes"
 msgstr ""
 
-#: view/qmodem/network_config.js:940
+#: view/qmodem/network_config.js:938
 msgid "Failed to load log"
 msgstr ""
 
@@ -1500,11 +1500,11 @@ msgstr ""
 msgid "Log Level"
 msgstr ""
 
-#: view/qmodem/network_config.js:994
+#: view/qmodem/network_config.js:992
 msgid "Log cleared successfully"
 msgstr ""
 
-#: view/qmodem/network_config.js:971
+#: view/qmodem/network_config.js:969
 msgid "Log downloaded successfully"
 msgstr ""
 
@@ -1825,11 +1825,11 @@ msgstr ""
 msgid "No features available for this modem."
 msgstr ""
 
-#: view/qmodem/network_config.js:931
+#: view/qmodem/network_config.js:929
 msgid "No log available"
 msgstr ""
 
-#: view/qmodem/network_config.js:973
+#: view/qmodem/network_config.js:971
 msgid "No log content to download"
 msgstr ""
 
@@ -1874,7 +1874,7 @@ msgstr ""
 msgid "No reboot methods available for this modem"
 msgstr ""
 
-#: view/qmodem/debug.js:202
+#: view/qmodem/debug.js:204
 msgid "No response received"
 msgstr ""
 
@@ -2165,7 +2165,7 @@ msgstr ""
 msgid "QModem Settings"
 msgstr ""
 
-#: view/qmodem/debug.js:220
+#: view/qmodem/debug.js:222
 msgid "Quick Commands"
 msgstr ""
 
@@ -2591,7 +2591,7 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: view/qmodem/debug.js:208
+#: view/qmodem/debug.js:210
 msgid "Send AT Command"
 msgstr ""
 
@@ -2599,7 +2599,7 @@ msgstr ""
 msgid "Send Message"
 msgstr ""
 
-#: view/qmodem/debug.js:191
+#: view/qmodem/debug.js:193
 msgid "Sending command..."
 msgstr ""
 
