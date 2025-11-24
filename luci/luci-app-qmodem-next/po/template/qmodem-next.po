@@ -41,7 +41,7 @@ msgstr ""
 msgid "16-bit (Unicode)"
 msgstr ""
 
-#: view/qmodem/settings.js:424
+#: view/qmodem/settings.js:451
 msgid "5G Ethernet Interface"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgstr ""
 #: vendor/sierra.sh:215
 #: vendor/simcom.sh:245
 #: vendor/telit.sh:164
-#: view/qmodem/settings.js:281
+#: view/qmodem/settings.js:308
 msgid "AT Port"
 msgstr ""
 
@@ -133,11 +133,11 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: view/qmodem/settings.js:249
+#: view/qmodem/settings.js:259
 msgid "Add"
 msgstr ""
 
-#: view/qmodem/settings.js:219
+#: view/qmodem/settings.js:229
 msgid "Add Modem Device"
 msgstr ""
 
@@ -155,15 +155,15 @@ msgstr ""
 msgid "Advanced Configuration"
 msgstr ""
 
-#: view/qmodem/settings.js:394
+#: view/qmodem/settings.js:421
 msgid "After setting this option, the first module loaded into this slot will automatically be assigned this default alias."
 msgstr ""
 
-#: view/qmodem/settings.js:274
+#: view/qmodem/settings.js:301
 msgid "Alias"
 msgstr ""
 
-#: view/qmodem/settings.js:92
+#: view/qmodem/settings.js:99
 msgid "Alternative AT Tools"
 msgstr ""
 
@@ -208,15 +208,19 @@ msgstr ""
 msgid "Are you sure you want to perform a soft reboot? The modem will restart and may lose connection temporarily."
 msgstr ""
 
-#: view/qmodem/settings.js:434
+#: view/qmodem/settings.js:266
+msgid "Are you sure you want to remove this modem device? this cannot be roll back with uci machanism."
+msgstr ""
+
+#: view/qmodem/settings.js:461
 msgid "Associated USB"
 msgstr ""
 
-#: view/qmodem/settings.js:119
+#: view/qmodem/settings.js:126
 msgid "Attempt to use pre-configured PCIe settings from the CPE vendor."
 msgstr ""
 
-#: view/qmodem/settings.js:115
+#: view/qmodem/settings.js:122
 msgid "Attempt to use pre-configured USB settings from the CPE vendor."
 msgstr ""
 
@@ -243,7 +247,7 @@ msgstr ""
 msgid "Available AT Ports"
 msgstr ""
 
-#: view/qmodem/settings.js:222
+#: view/qmodem/settings.js:232
 msgid "Available Devices"
 msgstr ""
 
@@ -308,7 +312,7 @@ msgstr ""
 msgid "Beeline (RU)"
 msgstr ""
 
-#: view/qmodem/settings.js:102
+#: view/qmodem/settings.js:109
 msgid "Block Auto Probe/Remove"
 msgstr ""
 
@@ -321,7 +325,7 @@ msgid "Bridge Mode"
 msgstr ""
 
 #: view/qmodem/network_config.js:987
-#: view/qmodem/settings.js:229
+#: view/qmodem/settings.js:239
 #: view/qmodem/sms.js:474
 #: view/qmodem/sms_forward.js:303
 msgid "Cancel"
@@ -513,7 +517,7 @@ msgstr ""
 msgid "Configure network preference (5G/4G/3G priority). Changes may require modem restart."
 msgstr ""
 
-#: view/qmodem/settings.js:360
+#: view/qmodem/settings.js:387
 msgid "Configure physical slots for modem installation"
 msgstr ""
 
@@ -636,15 +640,15 @@ msgstr ""
 msgid "Debug"
 msgstr ""
 
-#: view/qmodem/settings.js:393
+#: view/qmodem/settings.js:420
 msgid "Default Alias"
 msgstr ""
 
-#: view/qmodem/settings.js:398
+#: view/qmodem/settings.js:425
 msgid "Default Metric"
 msgstr ""
 
-#: view/qmodem/settings.js:96
+#: view/qmodem/settings.js:103
 msgid "Delay Start"
 msgstr ""
 
@@ -668,7 +672,7 @@ msgstr ""
 msgid "Detected Ports"
 msgstr ""
 
-#: view/qmodem/settings.js:278
+#: view/qmodem/settings.js:305
 msgid "Device Path"
 msgstr ""
 
@@ -716,7 +720,7 @@ msgstr ""
 msgid "Disable"
 msgstr ""
 
-#: view/qmodem/settings.js:328
+#: view/qmodem/settings.js:355
 msgid "Disabled Features"
 msgstr ""
 
@@ -813,7 +817,7 @@ msgstr ""
 msgid "Enable Dial (Global)"
 msgstr ""
 
-#: view/qmodem/settings.js:106
+#: view/qmodem/settings.js:113
 msgid "Enable PCIe Scan"
 msgstr ""
 
@@ -821,7 +825,7 @@ msgstr ""
 msgid "Enable SMS Forwarder"
 msgstr ""
 
-#: view/qmodem/settings.js:110
+#: view/qmodem/settings.js:117
 msgid "Enable USB Scan"
 msgstr ""
 
@@ -836,7 +840,7 @@ msgstr ""
 
 #: view/qmodem/network_config.js:76
 #: view/qmodem/network_config.js:738
-#: view/qmodem/settings.js:254
+#: view/qmodem/settings.js:281
 msgid "Enabled"
 msgstr ""
 
@@ -1111,11 +1115,11 @@ msgstr ""
 msgid "Feishu webhook URL from your bot configuration"
 msgstr ""
 
-#: view/qmodem/settings.js:425
+#: view/qmodem/settings.js:452
 msgid "For 5G modules using the Ethernet PHY connection, please specify the network interface name (e.g., eth0, eth1)"
 msgstr ""
 
-#: view/qmodem/settings.js:435
+#: view/qmodem/settings.js:462
 msgid "For M.2 slots with both PCIe and USB support, specify the associated USB port (for ttyUSB access)"
 msgstr ""
 
@@ -1140,27 +1144,27 @@ msgstr ""
 msgid "Friday"
 msgstr ""
 
-#: view/qmodem/settings.js:179
+#: view/qmodem/settings.js:188
 msgid "Full scan completed successfully"
 msgstr ""
 
-#: view/qmodem/settings.js:188
+#: view/qmodem/settings.js:198
 msgid "Full scan error: "
 msgstr ""
 
-#: view/qmodem/settings.js:181
+#: view/qmodem/settings.js:191
 msgid "Full scan failed"
 msgstr ""
 
-#: view/qmodem/settings.js:450
+#: view/qmodem/settings.js:477
 msgid "GPIO Value(Modem Power Down)"
 msgstr ""
 
-#: view/qmodem/settings.js:455
+#: view/qmodem/settings.js:482
 msgid "GPIO Value(Modem Power Up)"
 msgstr ""
 
-#: view/qmodem/settings.js:446
+#: view/qmodem/settings.js:473
 msgid "GPIO pin for power control"
 msgstr ""
 
@@ -1250,11 +1254,11 @@ msgstr ""
 msgid "If enabled, the APN will be set even if it matches the current configuration.(only works with tom modified version of quectel-cm)"
 msgstr ""
 
-#: view/qmodem/settings.js:103
+#: view/qmodem/settings.js:110
 msgid "If enabled, the modem auto scan will be blocked."
 msgstr ""
 
-#: view/qmodem/settings.js:93
+#: view/qmodem/settings.js:100
 msgid "If enabled, using alternative AT Tools"
 msgstr ""
 
@@ -1364,16 +1368,16 @@ msgstr ""
 msgid "Invalid lockband data structure"
 msgstr ""
 
-#: view/qmodem/settings.js:405
+#: view/qmodem/settings.js:432
 msgid "LED indicator for SIM card status"
 msgstr ""
 
-#: view/qmodem/settings.js:415
+#: view/qmodem/settings.js:442
 msgid "LED indicator for network connection status"
 msgstr ""
 
 #: vendor/huawei.sh:393
-#: view/qmodem/settings.js:341
+#: view/qmodem/settings.js:368
 msgid "LTE Band"
 msgstr ""
 
@@ -1630,7 +1634,7 @@ msgstr ""
 msgid "Model"
 msgstr ""
 
-#: view/qmodem/settings.js:272
+#: view/qmodem/settings.js:299
 msgid "Model Name"
 msgstr ""
 
@@ -1643,11 +1647,11 @@ msgstr ""
 msgid "Modem Config"
 msgstr ""
 
-#: view/qmodem/settings.js:200
+#: view/qmodem/settings.js:210
 msgid "Modem Device"
 msgstr ""
 
-#: view/qmodem/settings.js:195
+#: view/qmodem/settings.js:205
 msgid "Modem Devices"
 msgstr ""
 
@@ -1671,16 +1675,24 @@ msgstr ""
 msgid "Modem Offline"
 msgstr ""
 
-#: view/qmodem/settings.js:90
+#: view/qmodem/settings.js:97
 msgid "Modem Probe Settings"
 msgstr ""
 
-#: view/qmodem/settings.js:367
+#: view/qmodem/settings.js:394
 msgid "Modem Slot"
 msgstr ""
 
-#: view/qmodem/settings.js:359
+#: view/qmodem/settings.js:386
 msgid "Modem Slot Configuration"
+msgstr ""
+
+#: view/qmodem/settings.js:276
+msgid "Modem device removal failed: "
+msgstr ""
+
+#: view/qmodem/settings.js:271
+msgid "Modem device removed successfully"
 msgstr ""
 
 #: qmodem/sms.js:211
@@ -1708,7 +1720,7 @@ msgstr ""
 msgid "NR Band"
 msgstr ""
 
-#: view/qmodem/settings.js:346
+#: view/qmodem/settings.js:373
 msgid "NSA Band"
 msgstr ""
 
@@ -1746,7 +1758,7 @@ msgstr ""
 msgid "Network Information"
 msgstr ""
 
-#: view/qmodem/settings.js:414
+#: view/qmodem/settings.js:441
 msgid "Network LED"
 msgstr ""
 
@@ -1805,7 +1817,7 @@ msgstr ""
 msgid "No bands available for this modem"
 msgstr ""
 
-#: view/qmodem/settings.js:211
+#: view/qmodem/settings.js:221
 msgid "No devices available. Please scan for devices first."
 msgstr ""
 
@@ -1919,11 +1931,11 @@ msgstr ""
 msgid "Once checking, the prefix will be apply to lan zone"
 msgstr ""
 
-#: view/qmodem/settings.js:107
+#: view/qmodem/settings.js:114
 msgid "Once enabled, the PCIe ports will be scanned on every boot."
 msgstr ""
 
-#: view/qmodem/settings.js:111
+#: view/qmodem/settings.js:118
 msgid "Once enabled, the USB ports will be scanned on every boot."
 msgstr ""
 
@@ -1935,7 +1947,7 @@ msgstr ""
 msgid "OpenID for message forwarding, use comma to separate multiple IDs"
 msgstr ""
 
-#: view/qmodem/settings.js:294
+#: view/qmodem/settings.js:321
 msgid "Override AT Port"
 msgstr ""
 
@@ -1955,19 +1967,19 @@ msgstr ""
 msgid "PCI and ARFCN are required"
 msgstr ""
 
-#: view/qmodem/settings.js:372
+#: view/qmodem/settings.js:399
 msgid "PCIe"
 msgstr ""
 
-#: view/qmodem/settings.js:133
+#: view/qmodem/settings.js:140
 msgid "PCIe scan completed successfully"
 msgstr ""
 
-#: view/qmodem/settings.js:142
+#: view/qmodem/settings.js:150
 msgid "PCIe scan error: "
 msgstr ""
 
-#: view/qmodem/settings.js:135
+#: view/qmodem/settings.js:142
 msgid "PCIe scan failed"
 msgstr ""
 
@@ -2039,11 +2051,11 @@ msgstr ""
 msgid "Physical Channel"
 msgstr ""
 
-#: view/qmodem/settings.js:377
+#: view/qmodem/settings.js:404
 msgid "Physical slot identifier (e.g., 1-1.4 for USB, 0000:01:00.0 for PCIe)"
 msgstr ""
 
-#: view/qmodem/settings.js:313
+#: view/qmodem/settings.js:340
 msgid "Platform"
 msgstr ""
 
@@ -2080,7 +2092,7 @@ msgstr ""
 msgid "Post Init Delay"
 msgstr ""
 
-#: view/qmodem/settings.js:445
+#: view/qmodem/settings.js:472
 msgid "Power GPIO"
 msgstr ""
 
@@ -2149,7 +2161,7 @@ msgstr ""
 msgid "QModem Network stopped successfully"
 msgstr ""
 
-#: view/qmodem/settings.js:85
+#: view/qmodem/settings.js:92
 msgid "QModem Settings"
 msgstr ""
 
@@ -2355,7 +2367,7 @@ msgstr ""
 msgid "RxLev"
 msgstr ""
 
-#: view/qmodem/settings.js:351
+#: view/qmodem/settings.js:378
 msgid "SA Band"
 msgstr ""
 
@@ -2389,7 +2401,7 @@ msgstr ""
 msgid "SIM Information"
 msgstr ""
 
-#: view/qmodem/settings.js:404
+#: view/qmodem/settings.js:431
 msgid "SIM LED"
 msgstr ""
 
@@ -2457,7 +2469,7 @@ msgstr ""
 msgid "SIM Status"
 msgstr ""
 
-#: view/qmodem/settings.js:288
+#: view/qmodem/settings.js:315
 msgid "SMS AT Port"
 msgstr ""
 
@@ -2490,7 +2502,7 @@ msgstr ""
 msgid "Sber Mobile (RU)"
 msgstr ""
 
-#: view/qmodem/settings.js:169
+#: view/qmodem/settings.js:178
 msgid "Scan ALL Manually"
 msgstr ""
 
@@ -2502,11 +2514,11 @@ msgstr ""
 msgid "Scan Neighbor Cells"
 msgstr ""
 
-#: view/qmodem/settings.js:123
+#: view/qmodem/settings.js:130
 msgid "Scan PCIe Manually"
 msgstr ""
 
-#: view/qmodem/settings.js:146
+#: view/qmodem/settings.js:154
 msgid "Scan USB Manually"
 msgstr ""
 
@@ -2514,21 +2526,21 @@ msgstr ""
 msgid "Scan neighboring cell towers and lock modem to specific cell. You can scan for nearby cells and then lock to a specific cell by copying its parameters."
 msgstr ""
 
-#: view/qmodem/settings.js:126
-#: view/qmodem/settings.js:149
-#: view/qmodem/settings.js:172
+#: view/qmodem/settings.js:133
+#: view/qmodem/settings.js:157
+#: view/qmodem/settings.js:181
 msgid "Scanning"
 msgstr ""
 
-#: view/qmodem/settings.js:127
+#: view/qmodem/settings.js:134
 msgid "Scanning PCIe ports, please wait..."
 msgstr ""
 
-#: view/qmodem/settings.js:150
+#: view/qmodem/settings.js:158
 msgid "Scanning USB ports, please wait..."
 msgstr ""
 
-#: view/qmodem/settings.js:173
+#: view/qmodem/settings.js:182
 msgid "Scanning all ports, please wait..."
 msgstr ""
 
@@ -2564,11 +2576,11 @@ msgstr ""
 msgid "Select Networks"
 msgstr ""
 
-#: view/qmodem/settings.js:220
+#: view/qmodem/settings.js:230
 msgid "Select a device to configure:"
 msgstr ""
 
-#: view/qmodem/settings.js:329
+#: view/qmodem/settings.js:356
 msgid "Select features to disable for this modem."
 msgstr ""
 
@@ -2677,11 +2689,11 @@ msgstr ""
 msgid "Slot"
 msgstr ""
 
-#: view/qmodem/settings.js:376
+#: view/qmodem/settings.js:403
 msgid "Slot ID"
 msgstr ""
 
-#: view/qmodem/settings.js:370
+#: view/qmodem/settings.js:397
 msgid "Slot Type"
 msgstr ""
 
@@ -2695,7 +2707,7 @@ msgstr ""
 #: view/qmodem/config_advanced.js:1445
 #: view/qmodem/config_advanced.js:1448
 #: view/qmodem/config_advanced.js:1495
-#: view/qmodem/settings.js:266
+#: view/qmodem/settings.js:293
 msgid "Soft Reboot"
 msgstr ""
 
@@ -2735,11 +2747,11 @@ msgstr ""
 msgid "Sunday"
 msgstr ""
 
-#: view/qmodem/settings.js:320
+#: view/qmodem/settings.js:347
 msgid "Supported Modes"
 msgstr ""
 
-#: view/qmodem/settings.js:321
+#: view/qmodem/settings.js:348
 msgid "Supported driver modes (e.g., RNDIS/NCM/QMI/MBIM/ETH/PPP)"
 msgstr ""
 
@@ -2803,7 +2815,7 @@ msgstr ""
 msgid "Temperature"
 msgstr ""
 
-#: view/qmodem/settings.js:399
+#: view/qmodem/settings.js:426
 msgid "The first module loaded into this slot will automatically be assigned this default metric."
 msgstr ""
 
@@ -2852,11 +2864,11 @@ msgstr ""
 msgid "Transmit Rate"
 msgstr ""
 
-#: view/qmodem/settings.js:118
+#: view/qmodem/settings.js:125
 msgid "Try Preset PCIe Port"
 msgstr ""
 
-#: view/qmodem/settings.js:114
+#: view/qmodem/settings.js:121
 msgid "Try Preset USB Port"
 msgstr ""
 
@@ -2868,7 +2880,7 @@ msgstr ""
 msgid "Tx Power"
 msgstr ""
 
-#: view/qmodem/settings.js:259
+#: view/qmodem/settings.js:286
 msgid "Type"
 msgstr ""
 
@@ -2903,19 +2915,19 @@ msgstr ""
 msgid "UMobile (MY)"
 msgstr ""
 
-#: view/qmodem/settings.js:371
+#: view/qmodem/settings.js:398
 msgid "USB"
 msgstr ""
 
-#: view/qmodem/settings.js:156
+#: view/qmodem/settings.js:164
 msgid "USB scan completed successfully"
 msgstr ""
 
-#: view/qmodem/settings.js:165
+#: view/qmodem/settings.js:174
 msgid "USB scan error: "
 msgstr ""
 
-#: view/qmodem/settings.js:158
+#: view/qmodem/settings.js:167
 msgid "USB scan failed"
 msgstr ""
 
@@ -2930,7 +2942,7 @@ msgstr ""
 msgid "Unifi (MY)"
 msgstr ""
 
-#: view/qmodem/settings.js:97
+#: view/qmodem/settings.js:104
 msgid "Units: seconds"
 msgstr ""
 
@@ -2960,11 +2972,11 @@ msgid "Use Ubus"
 msgstr ""
 
 #: view/qmodem/debug.js:140
-#: view/qmodem/settings.js:300
+#: view/qmodem/settings.js:327
 msgid "Use Ubus AT Daemon"
 msgstr ""
 
-#: view/qmodem/settings.js:306
+#: view/qmodem/settings.js:333
 msgid "Vendor"
 msgstr ""
 
@@ -2995,7 +3007,7 @@ msgstr ""
 msgid "Voltage"
 msgstr ""
 
-#: view/qmodem/settings.js:336
+#: view/qmodem/settings.js:363
 msgid "WCDMA Band"
 msgstr ""
 
@@ -3045,24 +3057,24 @@ msgstr ""
 msgid "Yota (RU)"
 msgstr ""
 
-#: view/qmodem/settings.js:273
-#: view/qmodem/settings.js:275
-#: view/qmodem/settings.js:279
-#: view/qmodem/settings.js:282
-#: view/qmodem/settings.js:289
-#: view/qmodem/settings.js:295
-#: view/qmodem/settings.js:337
-#: view/qmodem/settings.js:342
-#: view/qmodem/settings.js:347
-#: view/qmodem/settings.js:352
-#: view/qmodem/settings.js:395
-#: view/qmodem/settings.js:401
-#: view/qmodem/settings.js:452
-#: view/qmodem/settings.js:457
+#: view/qmodem/settings.js:300
+#: view/qmodem/settings.js:302
+#: view/qmodem/settings.js:306
+#: view/qmodem/settings.js:309
+#: view/qmodem/settings.js:316
+#: view/qmodem/settings.js:322
+#: view/qmodem/settings.js:364
+#: view/qmodem/settings.js:369
+#: view/qmodem/settings.js:374
+#: view/qmodem/settings.js:379
+#: view/qmodem/settings.js:422
+#: view/qmodem/settings.js:428
+#: view/qmodem/settings.js:479
+#: view/qmodem/settings.js:484
 msgid "e.g."
 msgstr ""
 
-#: view/qmodem/settings.js:267
+#: view/qmodem/settings.js:294
 msgid "enable modem soft reboot"
 msgstr ""
 
