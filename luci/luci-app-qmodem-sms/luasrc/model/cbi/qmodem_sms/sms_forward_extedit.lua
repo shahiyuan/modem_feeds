@@ -75,6 +75,7 @@ api_type:value("webhook", translate("Webhook"))
 api_type:value("serverchan", translate("ServerChan"))
 api_type:value("pushdeer", translate("PushDeer"))
 api_type:value("custom_script", translate("Custom Script"))
+api_type:value("feishu", translate("Feishu Bot"))
 
 -- 删除已转发短信选项
 delete_after_forward = s2:option(Flag, "delete_after_forward", translate("Delete After Forward"))
@@ -94,10 +95,20 @@ tg_chat_id.placeholder = "123456789"
 webhook_url = s2:option(Value, "webhook_url", translate("Webhook URL"))
 webhook_url:depends("api_type", "webhook")
 webhook_url.placeholder = "https://example.com/webhook"
+webhook_url.description = translate("URL of the webhook endpoint(Also supports placeholders:" ) .. "{SENDER}, {CONTENT}, {TIME})" .. translate(" and need to be URL encoded)")
 
 webhook_headers = s2:option(Value, "webhook_headers", translate("Headers (optional)"))
 webhook_headers:depends("api_type", "webhook")
 webhook_headers.placeholder = "Authorization: Bearer token"
+
+webhook_format = s2:option(Value, "webhook_format", translate("Message Format (optional)"))
+webhook_format:depends("api_type", "webhook")
+webhook_format.placeholder = "{SENDER}/{CONTENT}({TIME})"
+webhook_format.description = translate("Custom message format using placeholders:") .. " {SENDER}, {CONTENT}, {TIME}"
+webhook_request_method = s2:option(ListValue, "webhook_request_method", translate("Request Method"))
+webhook_request_method:depends("api_type", "webhook")
+webhook_request_method:value("GET", "GET")
+webhook_request_method:value("POST", "POST")
 
 -- ServerChan 配置
 serverchan_token = s2:option(Value, "serverchan_token", translate("Token"))
@@ -129,6 +140,12 @@ pushdeer_endpoint = s2:option(Value, "pushdeer_endpoint", translate("API Endpoin
 pushdeer_endpoint:depends("api_type", "pushdeer")
 pushdeer_endpoint.placeholder = "https://api2.pushdeer.com"
 pushdeer_endpoint.description = translate("Custom PushDeer API endpoint, leave empty to use default")
+
+feishu_webhook_key = s2:option(Value, "feishu_webhook_key", translate("Feishu Webhook Key"))
+feishu_webhook_key:depends("api_type", "feishu")
+feishu_webhook_key.placeholder = "xxxxxx"
+feishu_webhook_key.description = translate("Feishu Webhook Key from your Feishu bot configuration")
+
 
 -- Custom Script 配置
 custom_script_path = s2:option(Value, "custom_script_path", translate("Script Path"))

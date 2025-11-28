@@ -179,6 +179,7 @@ int parse_user_input(int argc, char *argv[], PROFILE_T *profile)
 
 int run_op(PROFILE_T *profile, void *transport)
 {
+    int ret;
     switch (profile->op)
     {
     case AT_OP:
@@ -188,7 +189,26 @@ int run_op(PROFILE_T *profile, void *transport)
     case SMS_READ_OP:
         return sms_read(profile, transport);
     case SMS_SEND_OP:
-        return sms_send(profile, transport);
+        ret = sms_send(profile, transport);
+        switch (ret)
+        {
+        case SUCCESS:
+            printf("{\"status\":\"success\"}");
+            break;
+        case SEND_SMS_FAILED:
+            printf("{\"status\":\"failed\",\"reason\":\"send_sms_failed\"}");
+            break;
+        case INVALID_PARAM:
+            printf("{\"status\":\"failed\",\"reason\":\"invalid_param\"}");
+            break;
+        case COMM_ERROR:
+            printf("{\"status\":\"failed\",\"reason\":\"comm_error\"}");
+            break;
+        default:
+            printf("{\"status\":\"failed\",\"reason\":\"unknown_error\"}");
+            break;
+        }
+        return ret;
     case SMS_DELETE_OP:
         return sms_delete(profile, transport);
     case SMS_UNREAD_OP:
@@ -201,7 +221,7 @@ int run_op(PROFILE_T *profile, void *transport)
     return UNKNOWN_ERROR;
 }
 
-static void clean_up()
+static void clean_up(int sig __attribute__((unused)))
 {
     dbg_msg("Clean up success");
     
@@ -214,6 +234,16 @@ static void clean_up()
         err_msg("Failed to unlock tty device");
     }
 #endif
+}
+
+static void atexit_cleanup(void)
+{
+    clean_up(0);
+}
+
+static void signal_cleanup(int sig __attribute__((unused)))
+{
+    clean_up(sig);
 }
 
 int main(int argc, char *argv[])
@@ -229,9 +259,9 @@ int main(int argc, char *argv[])
     }
     
     // Setup cleanup and signal handlers
-    atexit(clean_up);
-    signal(SIGINT, clean_up);
-    signal(SIGTERM, clean_up);
+    atexit(atexit_cleanup);
+    signal(SIGINT, signal_cleanup);
+    signal(SIGTERM, signal_cleanup);
     
 #ifdef USE_SEMAPHORE
     if (profile->op == CLEANUP_SEMAPHORE_OP)

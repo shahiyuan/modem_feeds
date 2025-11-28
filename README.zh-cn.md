@@ -1,5 +1,37 @@
 # QModem (中文)
 
+那些希望使用纯净的JS Luci的用户（测试版本）
+
+应大家都需求，QModem推出了纯JS Luci的前端，可以不再依赖luci-compat，减少很多Luci 21后的兼容性问题。
+
+### 使用方法：
+- 更新feeds并安装feeds新增的软件包。
+- 导航到Luci -> Application -> luci-app-qmodem。
+- 移除luci-app-qmodem以及luci-app-qmodem-sms/mwam/ttl等。
+- 选择luci-app-qmodem-next。
+
+### 功能改动：
+1. 优化了拨号配置界面，重新设计了拨号日志和拨号状态的显示逻辑。
+2. 优化了短信，目前暂未将短信功能单独拆分。短信功能以对话框形式呈现，自动导出到路由的文件系统，支持记录已发信息。
+3. 优化了AT调试、模组高级功能的界面。
+4. 优化了所有设置界面。
+5. 使用脚本+AI提取待翻译的字符串，翻译覆盖率有较大提升。
+6. 短信转发：已读短信也会转发。
+
+### 兼容性与局限性说明：
+1. 功能的删除：MWAN、TTL功能在这一版本中被暂时无限期移除。
+2. 短信功能的稳定性：为了节省开发时间，目前短信后端实现的较为简陋，采用JSON作为数据库。
+3. 短信管理：不支持在UI设置短信储存位置，不支持在UI删除短信。仅可选择自动删除短信。
+4. 短信显示：已知问题：短信拼接基于timestamp+reference ID，但是由于部分运营商和模组提供的timestamp并不可靠，导致长信息无法拼接。
+
+---
+
+# 针对部分使用webui的用户和开发者的特别提示：
+模组端的atd是一个古老的设计，并且不同厂商有非常不同的实现，在兼容性和并发、返回完整性甚至atd服务的稳定性上都表现较差。
+因此当你同时使用 webui 和 qmodem （或者多个不同模组管理插件）时，会增加同时发送at指令的概率，造成 信息不全、atd服务崩溃（这通常是atd开发者的问题） 导致乱码、at卡死、模组掉线。
+如果你是用户，建议二选一，不要同时使用多个模组管理插件
+如果你是 webui 的开发者，我推荐你使用我开发的 ubus atd 插件来代替在模组端使用自建的 atd 服务，这样可以让qmodem兼容你的项目，并且节省您开发时间 [参考说明](docs/rpcd-at-daemon-userguide-cn.md)
+
 **中文 README** | **[English README](README.md)**
 
 [![使用 OpenWrt SDK 自动编译](https://github.com/FUjr/modem_feeds/actions/workflows/main.yml/badge.svg)](https://github.com/FUjr/modem_feeds/actions/workflows/main.yml)
@@ -18,23 +50,7 @@
 
 有关功能和能力的完整列表，请参阅[用户指南](docs/user-guide.zh-cn.md)。
 
-## 🏠 相关项目：Home Assistant 集成
-
-想要在 Home Assistant 中监控您的 OpenWrt 路由器和 QModem 状态吗？请查看我们的配套项目：
-
-### [OpenWrt Ubus Integration for Home Assistant](https://github.com/FUjr/homeassistant-openwrt-ubus)
-
-一个自定义的 Home Assistant 集成，通过 ubus 接口连接到 OpenWrt 路由器，提供：
-
-- **📱 设备跟踪**: 实时监控无线设备和 DHCP 客户端
-- **📊 系统监控**: 跟踪正常运行时间、负载平均值、内存使用情况
-- **📡 QModem 支持**: 监控 4G/LTE 调制解调器状态、信号强度和连接详情
-- **📶 无线站点**: 跟踪站点关联和信号信息
-- **🔧 简易设置**: 通过 Home Assistant UI 进行简单配置
-
-![QModem Integration](https://github.com/FUjr/homeassistant-openwrt-ubus/blob/main/imgs/qmodem_info.png)
-
-完美地将您的 QModem 驱动的 OpenWrt 路由器集成到智能家居生态系统中！
+## 相关项目： Home Assistant 的 OpenWrt 管理插件
 
 [**在 GitHub 上查看 →**](https://github.com/FUjr/homeassistant-openwrt-ubus)
 
