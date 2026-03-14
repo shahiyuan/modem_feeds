@@ -376,6 +376,13 @@ match_config()
     sa_available_band=$(echo $modem_config | jq -r ".sa_band")
 }
 
+get_model_name_by_id()
+{
+    local id=$1
+    local name=$(echo $modem_support | jq -r '.modem_support."'$slot_type'" | to_entries[] | select(.value.id=="'$id'") | .key')
+    echo $name
+}
+
 get_modem_model()
 {
     local at_port=$1
@@ -434,15 +441,18 @@ add()
     esac
     #if no netdev return
     [ -z "$net_devices" ] && lock -u /tmp/lock/modem_add_$slot && return
-    for trys in $(seq 1 3);do
-        for at_port in $valid_at_ports; do
-            m_debug "try at port $at_port;time $trys"
-            get_modem_model "/dev/$at_port"
-            [ $? -eq 0 ] && break || modem_name=""
+    modem_name=$(get_model_name_by_id $id)
+    if [ -z "$modem_name" ];then
+        for trys in $(seq 1 3);do
+            for at_port in $valid_at_ports; do
+                m_debug "try at port $at_port;time $trys"
+                get_modem_model "/dev/$at_port"
+                [ $? -eq 0 ] && break || modem_name=""
+            done
+            [ -n "$modem_name" ] && break
+            sleep 1
         done
-        [ -n "$modem_name" ] && break
-        sleep 1
-    done
+    fi
     [ -z "$modem_name" ] && lock -u /tmp/lock/modem_add_$slot && return
     m_debug  "add modem $modem_name slot $slot slot_type $slot_type"
     if [ -n "$is_exist" ]; then
