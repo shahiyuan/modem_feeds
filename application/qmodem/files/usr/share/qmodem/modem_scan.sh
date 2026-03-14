@@ -441,6 +441,9 @@ add()
     esac
     #if no netdev return
     [ -z "$net_devices" ] && lock -u /tmp/lock/modem_add_$slot && return
+    product_id=$(cat $modem_path/idProduct)
+    vendor_id=$(cat $modem_path/idVendor)
+    id="$vendor_id:$product_id"
     modem_name=$(get_model_name_by_id $id)
     if [ -z "$modem_name" ];then
         for trys in $(seq 1 3);do
