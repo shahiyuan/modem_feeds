@@ -130,6 +130,7 @@ modem_settings()
 		uci set	qmodem.pcie0.associated_usb='2-1'
 		uci set qmodem.pcie0.alias="pcie0"
 		uci set qmodem.pcie0.led_script="m02k45"
+		uci set qmodem.main.start_delay='15'
 		uci commit qmodem
 		;;
 	p2w,r619ac*)
